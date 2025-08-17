@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function TechStack() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const technologies = [
     { 
       name: 'React', 
@@ -64,11 +66,29 @@ export default function TechStack() {
     }
   ];
 
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % technologies.length);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Create a circular array for smooth infinite scrolling - max 8 items
+  const getVisibleTechnologies = () => {
+    const visible = [];
+    for (let i = 0; i < 8; i++) {
+      const index = (currentIndex + i) % technologies.length;
+      visible.push({ ...technologies[index], position: i });
+    }
+    return visible;
+  };
 
   return (
     <section className="py-20 bg-white dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+      <div className="w-full">
+        <div className="text-center mb-16 px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Technology Stack
           </h2>
@@ -77,25 +97,49 @@ export default function TechStack() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {technologies.map((tech, index) => (
-            <div 
-              key={index}
-              className={`${tech.color} rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-200 dark:border-gray-600 group`}
-            >
-              <div className="flex flex-col items-center space-y-3">
+        {/* Technology Carousel */}
+        <div className="w-full px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between space-x-4 overflow-hidden">
+            {getVisibleTechnologies().map((tech, index) => (
+              <div 
+                key={`${tech.name}-${index}`}
+                className={`${tech.color} rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-gray-200 dark:border-gray-600 group flex-shrink-0 w-32 h-32 flex flex-col items-center justify-center backdrop-blur-sm bg-opacity-80`}
+              >
                 <img 
                   src={tech.logo} 
                   alt={tech.name}
-                  className="h-10 w-10 group-hover:scale-110 transition-transform duration-300"
+                  className="h-12 w-12 group-hover:scale-110 transition-transform duration-300 mb-3 filter drop-shadow-sm"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const parent = target.parentElement;
+                    if (parent) {
+                      parent.innerHTML = `<div class="h-12 w-12 bg-gradient-to-r from-purple-500 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg mb-3 shadow-lg">${tech.name.charAt(0)}</div>`;
+                    }
+                  }}
                 />
-                <span className="font-medium text-gray-900 dark:text-white text-center">{tech.name}</span>
+                <span className="font-semibold text-gray-900 dark:text-white text-center text-sm">{tech.name}</span>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* Carousel Indicators */}
+          <div className="flex justify-center space-x-2 mt-6">
+            {technologies.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === currentIndex
+                    ? 'bg-purple-600 scale-125'
+                    : 'bg-gray-300 dark:bg-gray-600 hover:bg-purple-400'
+                }`}
+              />
+            ))}
+          </div>
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-purple-50 to-orange-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 text-center">
+        <div className="mt-16 bg-gradient-to-r from-purple-50 to-orange-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 text-center mx-4 sm:mx-6 lg:mx-8">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Full-Stack Versatility</h3>
           <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             With expertise spanning frontend frameworks, backend technologies, databases, and cloud platforms, 
