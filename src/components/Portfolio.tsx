@@ -1,164 +1,165 @@
-import React from 'react';
-import { ExternalLink, Users, TrendingUp } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-export default function Portfolio() {
-  const projects = [
+interface PortfolioProps {
+  onProjectSelect: (projectId: string) => void;
+}
+
+export default function Portfolio({ onProjectSelect }: PortfolioProps) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const companies = [
     {
-      title: 'OncoCare Platform',
-      client: 'GE Healthcare',
-      link: 'https://www.gehealthcare.com/specialties/oncology-solutions/oncocare',
-      description: 'Comprehensive oncology care management platform serving healthcare providers worldwide.',
-      problem: 'Complex patient data management and treatment tracking across multiple healthcare facilities.',
-      solution: 'Built a scalable web application with real-time data synchronization and advanced reporting.',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'AWS'],
-      outcome: 'Improved patient care coordination by 40% and reduced administrative overhead by 60%',
-      image: 'https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=800',
-      metrics: {
-        users: '10K+',
-        improvement: '40%'
-      }
+      id: 'ge-healthcare',
+      name: 'GE Healthcare',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/GE_Healthcare_logo.svg/320px-GE_Healthcare_logo.svg.png',
+      project: 'OncoCare Platform',
+      description: 'Comprehensive oncology care management platform'
     },
     {
-      title: 'Instarem.com',
-      client: 'Nium (formerly InstaReM)',
-      link: 'https://www.instarem.com',
-      description: 'Global fintech platform for cross-border money transfers and digital banking.',
-      problem: 'Legacy system limitations affecting transaction processing speed and user experience.',
-      solution: 'Redesigned architecture with microservices and implemented real-time transaction processing.',
-      technologies: ['React', 'Python', 'C#', 'AWS', 'PostgreSQL'],
-      outcome: 'Increased transaction processing speed by 300% and improved user satisfaction scores',
-      image: 'https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=800',
-      metrics: {
-        users: '100K+',
-        improvement: '300%'
-      }
+      id: 'nium',
+      name: 'Nium',
+      logo: 'https://assets-global.website-files.com/5f973c970bea5548ad4287ef/6087f2c739e0e143d0a2b3e5_nium-logo-purple.svg',
+      project: 'Instarem.com',
+      description: 'Global fintech platform for cross-border payments'
     },
     {
-      title: 'Parents.VIP',
-      client: 'The Parent Inc.',
-      link: 'https://www.parents.vip/viparent',
-      description: 'Premium parenting platform connecting parents with expert childcare resources.',
-      problem: 'Fragmented parenting resources and lack of personalized expert guidance.',
-      solution: 'Created an integrated platform with expert matching, content management, and community features.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'AWS'],
-      outcome: 'Connected 5K+ families with certified experts and achieved 95% user retention',
-      image: 'https://images.pexels.com/photos/1250452/pexels-photo-1250452.jpeg?auto=compress&cs=tinysrgb&w=800',
-      metrics: {
-        users: '5K+',
-        improvement: '95%'
-      }
+      id: 'baxter',
+      name: 'Baxter International',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Baxter_International_Logo.svg/320px-Baxter_International_Logo.svg.png',
+      project: 'Healthcare Platform',
+      description: 'Medical device monitoring and patient care coordination'
     },
     {
-      title: 'Smartbot Hub',
-      client: 'SmarTek21',
-      link: 'https://smartek21.com/resource/smartbothub-company-overview/',
-      description: 'AI-powered chatbot platform for business automation and customer service.',
-      problem: 'Businesses needed intelligent automation solutions for customer interactions.',
-      solution: 'Built a comprehensive bot management platform with AI integration and analytics.',
-      technologies: ['React', 'Python', 'TensorFlow', 'AWS'],
-      outcome: 'Automated 80% of customer inquiries and reduced response times by 90%',
-      image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
-      metrics: {
-        users: '2K+',
-        improvement: '90%'
-      }
+      id: 'parent-inc',
+      name: 'The Parent Inc.',
+      logo: 'https://images.crunchbase.com/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/erkxwhl1gqjfqgz2o3qc',
+      project: 'Parents.VIP',
+      description: 'Premium parenting platform with expert resources'
     },
     {
-      title: 'Baxter Healthcare Platform',
-      client: 'Baxter International',
-      link: 'https://www.baxter.com',
-      description: 'Healthcare management system for medical device monitoring and patient care coordination.',
-      problem: 'Complex medical device data integration and real-time patient monitoring across healthcare networks.',
-      solution: 'Developed a comprehensive healthcare platform with device integration, real-time monitoring, and analytics.',
-      technologies: ['React', 'C#', '.NET', 'SQL Server', 'Azure'],
-      outcome: 'Improved patient monitoring efficiency by 50% and reduced device downtime by 35%',
-      image: 'https://images.pexels.com/photos/3786157/pexels-photo-3786157.jpeg?auto=compress&cs=tinysrgb&w=800',
-      metrics: {
-        users: '15K+',
-        improvement: '50%'
-      }
+      id: 'smartek21',
+      name: 'SmarTek21',
+      logo: 'https://smartek21.com/wp-content/uploads/2021/03/smartek21-logo.png',
+      project: 'Smartbot Hub',
+      description: 'AI-powered chatbot platform for business automation'
     }
   ];
 
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % companies.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + companies.length) % companies.length);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const getVisibleCompanies = () => {
+    const visible = [];
+    for (let i = 0; i < 3; i++) {
+      const index = (currentIndex + i) % companies.length;
+      visible.push({ ...companies[index], position: i });
+    }
+    return visible;
+  };
+
   return (
-    <section id="portfolio" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="portfolio" className="py-20 bg-gradient-to-br from-purple-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Portfolio & Success Stories
+            Trusted by Industry Leaders
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Real projects, real results. See how I've helped businesses scale and succeed.
+            Click on any company logo to explore the projects I've delivered
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div key={index} className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group">
-              <div className="relative overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 flex space-x-4">
-                  <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-1 flex items-center space-x-2">
-                    <Users className="h-4 w-4 text-white" />
-                    <span className="text-white font-semibold">{project.metrics.users}</span>
-                  </div>
-                  <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-1 flex items-center space-x-2">
-                    <TrendingUp className="h-4 w-4 text-white" />
-                    <span className="text-white font-semibold">+{project.metrics.improvement}</span>
-                  </div>
-                </div>
-              </div>
+        <div className="relative">
+          {/* Carousel Container */}
+          <div className="flex items-center justify-center space-x-8 mb-12">
+            <button
+              onClick={prevSlide}
+              className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200 dark:border-gray-700"
+            >
+              <ChevronLeft className="h-6 w-6 text-gray-600 dark:text-gray-300" />
+            </button>
 
-              <div className="p-6">
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{project.title}</h3>
-                    <p className="text-purple-600 dark:text-purple-400 font-semibold">{project.client}</p>
-                  </div>
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 cursor-pointer transition-colors"
-                  >
-                    <ExternalLink className="h-5 w-5" />
-                  </a>
-                </div>
-
-                <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
-
-                <div className="mb-4">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Challenge & Solution:</h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">
-                    <strong>Problem:</strong> {project.problem}
-                  </p>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm">
-                    <strong>Solution:</strong> {project.solution}
-                  </p>
-                </div>
-
-                <div className="mb-4">
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">
-                        {tech}
-                      </span>
-                    ))}
+            <div className="flex items-center space-x-6">
+              {getVisibleCompanies().map((company) => (
+                <div
+                  key={company.id}
+                  className={`transition-all duration-500 cursor-pointer ${
+                    company.position === 1
+                      ? 'scale-110 z-10'
+                      : 'scale-90 opacity-70 hover:opacity-100'
+                  }`}
+                  onClick={() => onProjectSelect(company.id)}
+                >
+                  <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 group">
+                    <div className="flex flex-col items-center space-y-4">
+                      <div className="w-32 h-20 flex items-center justify-center">
+                        <img
+                          src={company.logo}
+                          alt={company.name}
+                          className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.style.display = 'none';
+                            const parent = target.parentElement;
+                            if (parent) {
+                              parent.innerHTML = `<div class="w-32 h-20 bg-gradient-to-r from-purple-500 to-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">${company.name}</div>`;
+                            }
+                          }}
+                        />
+                      </div>
+                      <div className="text-center">
+                        <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-1">
+                          {company.project}
+                        </h3>
+                        <p className="text-gray-600 dark:text-gray-300 text-sm">
+                          {company.description}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-
-                <div className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-lg p-3">
-                  <p className="text-orange-800 dark:text-orange-400 text-sm font-semibold">Outcome:</p>
-                  <p className="text-orange-700 dark:text-orange-300 text-sm">{project.outcome}</p>
-                </div>
-              </div>
+              ))}
             </div>
-          ))}
+
+            <button
+              onClick={nextSlide}
+              className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200 dark:border-gray-700"
+            >
+              <ChevronRight className="h-6 w-6 text-gray-600 dark:text-gray-300" />
+            </button>
+          </div>
+
+          {/* Carousel Indicators */}
+          <div className="flex justify-center space-x-2">
+            {companies.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentIndex
+                    ? 'bg-purple-600 scale-125'
+                    : 'bg-gray-300 dark:bg-gray-600 hover:bg-purple-400'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center mt-12">
+          <p className="text-gray-600 dark:text-gray-300 text-lg">
+            From Fortune 500 companies to innovative startups, I deliver scalable solutions that drive results
+          </p>
         </div>
       </div>
     </section>

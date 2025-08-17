@@ -10,9 +10,13 @@ import TechStack from './components/TechStack';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LeadDashboard from './components/LeadDashboard';
+import ProjectDetails from './components/ProjectDetails';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsOfService from './components/TermsOfService';
 
 function App() {
   const [currentView, setCurrentView] = useState('website');
+  const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
   if (currentView === 'dashboard') {
     return (
@@ -22,18 +26,47 @@ function App() {
     );
   }
 
+  if (currentView === 'privacy') {
+    return (
+      <ThemeProvider>
+        <PrivacyPolicy onBack={() => setCurrentView('website')} />
+      </ThemeProvider>
+    );
+  }
+
+  if (currentView === 'terms') {
+    return (
+      <ThemeProvider>
+        <TermsOfService onBack={() => setCurrentView('website')} />
+      </ThemeProvider>
+    );
+  }
+
+  if (selectedProject) {
+    return (
+      <ThemeProvider>
+        <ProjectDetails 
+          projectId={selectedProject} 
+          onBack={() => setSelectedProject(null)} 
+        />
+      </ThemeProvider>
+    );
+  }
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
         <Header onDashboard={() => setCurrentView('dashboard')} />
         <Hero />
         <Services />
-        <Portfolio />
+        <Portfolio onProjectSelect={setSelectedProject} />
         <ClientStories />
         <About />
         <TechStack />
         <Contact />
-        <Footer />
+        <Footer 
+          onPrivacyClick={() => setCurrentView('privacy')}
+          onTermsClick={() => setCurrentView('terms')}
+        />
       </div>
     </ThemeProvider>
   );

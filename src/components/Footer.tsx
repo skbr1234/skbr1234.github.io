@@ -1,7 +1,12 @@
 import React from 'react';
 import { Code, Mail, Phone, MessageSquare } from 'lucide-react';
 
-export default function Footer() {
+interface FooterProps {
+  onPrivacyClick: () => void;
+  onTermsClick: () => void;
+}
+
+export default function Footer({ onPrivacyClick, onTermsClick }: FooterProps) {
   return (
     <footer className="bg-gray-900 dark:bg-black text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,8 +51,22 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-300">
               <li><a href="#about" className="hover:text-purple-400 transition-colors">About</a></li>
               <li><a href="#contact" className="hover:text-purple-400 transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-purple-400 transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-purple-400 transition-colors">Terms of Service</a></li>
+              <li>
+                <button 
+                  onClick={onPrivacyClick}
+                  className="hover:text-purple-400 transition-colors text-left"
+                >
+                  Privacy Policy
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={onTermsClick}
+                  className="hover:text-purple-400 transition-colors text-left"
+                >
+                  Terms of Service
+                </button>
+              </li>
             </ul>
           </div>
         </div>
