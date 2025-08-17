@@ -12,7 +12,6 @@ import {
 
 export default function TechStack() {
   const technologies = [
-    { name: 'React', category: 'Frontend', color: 'bg-blue-500' },
     { name: 'React', icon: Code, color: 'text-blue-500' },
     { name: 'Node.js', icon: Server, color: 'text-green-500' },
     { name: 'TypeScript', icon: Code, color: 'text-blue-600' },
