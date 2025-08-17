@@ -6,13 +6,13 @@ export default function Portfolio() {
     {
       title: 'OncoCare Platform',
       client: 'GE Healthcare',
-      link: 'https://www.gehealthcare.com/products/oncology-care-solutions',
+      link: 'https://www.gehealthcare.com/specialties/oncology-solutions/oncocare',
       description: 'Comprehensive oncology care management platform serving healthcare providers worldwide.',
       problem: 'Complex patient data management and treatment tracking across multiple healthcare facilities.',
       solution: 'Built a scalable web application with real-time data synchronization and advanced reporting.',
       technologies: ['React', 'Node.js', 'PostgreSQL', 'AWS'],
       outcome: 'Improved patient care coordination by 40% and reduced administrative overhead by 60%',
-      image: 'https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=800',
       metrics: {
         users: '10K+',
         improvement: '40%'
@@ -27,7 +27,7 @@ export default function Portfolio() {
       solution: 'Redesigned architecture with microservices and implemented real-time transaction processing.',
       technologies: ['React', 'Python', 'C#', 'AWS', 'PostgreSQL'],
       outcome: 'Increased transaction processing speed by 300% and improved user satisfaction scores',
-      image: 'https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=800',
       metrics: {
         users: '100K+',
         improvement: '300%'
@@ -61,6 +61,21 @@ export default function Portfolio() {
       metrics: {
         users: '2K+',
         improvement: '90%'
+      }
+    },
+    {
+      title: 'Baxter Healthcare Platform',
+      client: 'Baxter International',
+      link: 'https://www.baxter.com',
+      description: 'Healthcare management system for medical device monitoring and patient care coordination.',
+      problem: 'Complex medical device data integration and real-time patient monitoring across healthcare networks.',
+      solution: 'Developed a comprehensive healthcare platform with device integration, real-time monitoring, and analytics.',
+      technologies: ['React', 'C#', '.NET', 'SQL Server', 'Azure'],
+      outcome: 'Improved patient monitoring efficiency by 50% and reduced device downtime by 35%',
+      image: 'https://images.pexels.com/photos/3786157/pexels-photo-3786157.jpeg?auto=compress&cs=tinysrgb&w=800',
+      metrics: {
+        users: '15K+',
+        improvement: '50%'
       }
     }
   ];

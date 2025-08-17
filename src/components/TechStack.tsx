@@ -1,29 +1,67 @@
 import React from 'react';
-import { 
-  Code, 
-  Database, 
-  Cloud, 
-  Server, 
-  Smartphone,
-  Globe,
-  Cpu,
-  Layers
-} from 'lucide-react';
 
 export default function TechStack() {
   const technologies = [
-    { name: 'React', icon: Code, color: 'text-blue-500' },
-    { name: 'Node.js', icon: Server, color: 'text-green-500' },
-    { name: 'TypeScript', icon: Code, color: 'text-blue-600' },
-    { name: 'Python', icon: Code, color: 'text-yellow-500' },
-    { name: 'C#', icon: Code, color: 'text-purple-500' },
-    { name: 'PostgreSQL', icon: Database, color: 'text-blue-700' },
-    { name: 'MongoDB', icon: Database, color: 'text-green-600' },
-    { name: 'AWS', icon: Cloud, color: 'text-orange-500' },
-    { name: 'Docker', icon: Layers, color: 'text-blue-400' },
-    { name: 'Next.js', icon: Globe, color: 'text-gray-800' },
-    { name: 'React Native', icon: Smartphone, color: 'text-cyan-500' },
-    { name: 'Redis', icon: Cpu, color: 'text-red-500' }
+    { 
+      name: 'React', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+      color: 'bg-blue-50 dark:bg-blue-900/20' 
+    },
+    { 
+      name: 'Node.js', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+      color: 'bg-green-50 dark:bg-green-900/20' 
+    },
+    { 
+      name: 'TypeScript', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+      color: 'bg-blue-50 dark:bg-blue-900/20' 
+    },
+    { 
+      name: 'Python', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+      color: 'bg-yellow-50 dark:bg-yellow-900/20' 
+    },
+    { 
+      name: 'C#', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
+      color: 'bg-purple-50 dark:bg-purple-900/20' 
+    },
+    { 
+      name: 'PostgreSQL', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+      color: 'bg-blue-50 dark:bg-blue-900/20' 
+    },
+    { 
+      name: 'MongoDB', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+      color: 'bg-green-50 dark:bg-green-900/20' 
+    },
+    { 
+      name: 'AWS', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+      color: 'bg-orange-50 dark:bg-orange-900/20' 
+    },
+    { 
+      name: 'Docker', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+      color: 'bg-blue-50 dark:bg-blue-900/20' 
+    },
+    { 
+      name: 'Next.js', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+      color: 'bg-gray-50 dark:bg-gray-800' 
+    },
+    { 
+      name: 'React Native', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+      color: 'bg-cyan-50 dark:bg-cyan-900/20' 
+    },
+    { 
+      name: 'Redis', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg',
+      color: 'bg-red-50 dark:bg-red-900/20' 
+    }
   ];
 
 
@@ -43,10 +81,14 @@ export default function TechStack() {
           {technologies.map((tech, index) => (
             <div 
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-100 dark:border-gray-700 group"
+              className={`${tech.color} rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-200 dark:border-gray-600 group`}
             >
               <div className="flex flex-col items-center space-y-3">
-                <tech.icon className={`h-8 w-8 ${tech.color} group-hover:scale-110 transition-transform duration-300`} />
+                <img 
+                  src={tech.logo} 
+                  alt={tech.name}
+                  className="h-10 w-10 group-hover:scale-110 transition-transform duration-300"
+                />
                 <span className="font-medium text-gray-900 dark:text-white text-center">{tech.name}</span>
               </div>
             </div>

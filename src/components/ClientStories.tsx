@@ -18,10 +18,10 @@ export default function ClientStories() {
       rating: 5
     },
     {
-      quote: "Kabeer delivered exceptional results on our AI chatbot platform. His ability to translate complex requirements into elegant solutions is remarkable.",
-      author: "Jennifer Wong",
+      quote: "Kabeer's expertise in healthcare technology integration was invaluable. His solution improved our device monitoring capabilities significantly.",
+      author: "Dr. Amanda Foster",
       role: "CEO",
-      company: "SmarTek21",
+      company: "Baxter International",
       rating: 5
     }
   ];
