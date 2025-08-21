@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, ExternalLink, Users, TrendingUp, CheckCircle, Pause, Play, Calendar, Code, Award } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ExternalLink, Users, TrendingUp, CheckCircle, Pause, Play, Award, ChevronDown, ChevronUp } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 
 export default function Portfolio() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [isDetailsExpanded, setIsDetailsExpanded] = useState(false);
   const { isDark } = useTheme();
 
   const projects = [
@@ -12,11 +13,9 @@ export default function Portfolio() {
       id: 'instarem',
       title: 'Instarem.com',
       client: 'NIUM',
-      logo: 'https://nium.com/wp-content/uploads/2023/03/nium-logo-purple.svg',
+      logo: '/images/logos/InstaRem_logo.svg',
       link: 'https://www.instarem.com',
       description: 'Flagship fintech product for cost-effective foreign remittances serving millions of users globally.',
-      role: 'Technical Lead - Full Stack Development',
-      duration: '2+ years',
       problem: 'Leading the technical development of a complex fintech platform handling millions in cross-border transactions with stringent regulatory requirements.',
       solution: 'Architected and led full-stack development using modern technologies, implementing robust security measures and scalable microservices architecture.',
       technologies: ['Node.js', 'React.js', 'PostgreSQL', 'Mocha', 'AWS'],
@@ -39,12 +38,10 @@ export default function Portfolio() {
     {
       id: 'oncocare',
       title: 'OncoCare Platform',
-      client: 'General Electric (via Quest Global)',
-      logo: 'https://logos-world.net/wp-content/uploads/2021/02/GE-Healthcare-Logo.png',
+      client: 'General Electric',
+      logo: '/images/logos/GeneralElectric_logo.svg',
       link: 'https://www.gehealthcare.com/specialties/oncology-solutions/oncocare',
       description: 'Comprehensive oncology care assistant platform for clinicians to manage patient data and enable confident cancer care decision-making.',
-      role: 'Senior Software Engineer - Team Lead',
-      duration: '18 months',
       problem: 'Healthcare professionals needed a unified platform to aggregate and visualize complex cancer patient data for better treatment decisions.',
       solution: 'Developed a comprehensive platform with data visualization, patient management, and decision support tools using modern web technologies.',
       technologies: ['Node.js', 'PostgreSQL', 'React.js', 'AWS', 'Leadership'],
@@ -68,11 +65,9 @@ export default function Portfolio() {
       id: 'parents-vip',
       title: 'Parents.VIP',
       client: 'The Parent Inc / TickleMedia',
-      logo: 'https://images.squarespace-cdn.com/content/v1/5e7b8a1c4c5c5f5c5c5c5c5c/1585155555555-5C5C5C5C5C5C5C5C5C5C/parent-inc-logo.png',
+      logo: '/images/logos/TheParentInc-logo.webp',
       link: 'https://www.parents.vip',
       description: 'End-to-end influencer social media promotions, market surveys, and content creation process management platform.',
-      role: 'SDE 3 - Full Stack Architect',
-      duration: '2 years',
       problem: 'Managing complex influencer marketing campaigns, content creation workflows, and market research processes across multiple platforms.',
       solution: 'Architected a comprehensive platform with microservices and micro front-end architecture for scalable influencer management.',
       technologies: ['Node.js', 'MySQL', 'Mocha', 'Microservices', 'AWS', 'Redis', 'Python'],
@@ -95,12 +90,10 @@ export default function Portfolio() {
     {
       id: 'rst-baxter',
       title: 'RST - Remote Service Tool',
-      client: 'Baxter Healthcare (via Quest Global)',
-      logo: 'https://logos-world.net/wp-content/uploads/2021/11/Baxter-Logo.png',
-      link: 'https://www.baxter.com',
+      client: 'Vantive Healthcare',
+      logo: '/images/logos/vantive_logo.png',
+      link: 'https://www.vantive.com',
       description: 'Medical device support platform for remote diagnosis and troubleshooting of medical devices in healthcare facilities.',
-      role: 'Senior Software Engineer',
-      duration: '15 months',
       problem: 'Healthcare facilities needed remote diagnostic capabilities for medical devices to reduce downtime and improve patient care.',
       solution: 'Developed IoT-enabled remote diagnostic platform with real-time monitoring and automated troubleshooting capabilities.',
       technologies: ['Node.js', 'PostgreSQL', 'AWS IoT', 'Jest', 'TDD', 'AWS'],
@@ -124,11 +117,9 @@ export default function Portfolio() {
       id: 'smartbothub',
       title: 'SmartbotHub',
       client: 'Smartek21',
-      logo: 'https://smartek21.com/wp-content/uploads/2021/03/smartek21-logo.png',
+      logo: '/images/logos/smartek21_logo.png',
       link: 'https://smartek21.com',
       description: 'Chatbot-building platform with Natural Language Processing for creating conversational AI chatbots.',
-      role: 'Full Stack Developer',
-      duration: '12 months',
       problem: 'Businesses needed an easy-to-use platform to create and deploy intelligent chatbots without technical expertise.',
       solution: 'Built a comprehensive chatbot development platform with NLP capabilities and intuitive drag-and-drop interface.',
       technologies: ['AngularJS', 'Node.js', 'MySQL', 'AWS', 'NLP'],
@@ -149,42 +140,12 @@ export default function Portfolio() {
       gradient: 'from-orange-600 to-red-600'
     },
     {
-      id: 'nerdspal',
-      title: 'Nerdspal.com',
-      client: 'Independent Project',
-      logo: 'https://via.placeholder.com/200x80/4F46E5/FFFFFF?text=Nerdspal',
-      link: '#',
-      description: 'Q&A platform connecting students with professionals for academic collaboration and knowledge sharing.',
-      role: 'Founder & Lead Developer',
-      duration: '18 months',
-      problem: 'Students needed a dedicated platform to get expert answers to academic questions from industry professionals.',
-      solution: 'Created a comprehensive Q&A platform with gamification, expert verification, and collaborative learning features.',
-      technologies: ['Node.js', 'AngularJS', 'Bootstrap', 'Google Cloud Platform'],
-      outcome: 'Connected 10K+ students with 2K+ professionals, facilitating 50K+ Q&A interactions',
-      image: 'https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      metrics: {
-        students: '10K+',
-        professionals: '2K+',
-        interactions: '50K+'
-      },
-      features: [
-        'Expert-verified Q&A system',
-        'Gamification and reputation system',
-        'Real-time collaboration tools',
-        'Subject-wise categorization',
-        'Mobile-responsive design'
-      ],
-      gradient: 'from-indigo-600 to-purple-600'
-    },
-    {
       id: 'nextauto',
       title: 'NextAuto',
       client: 'NextServices HSS Pvt Ltd',
-      logo: 'https://via.placeholder.com/200x80/059669/FFFFFF?text=NextServices',
-      link: '#',
+      logo: '/images/logos/nextservices_logo.png',
+      link: 'https://nextservices.com/',
       description: 'Internal process automation software for automating web scraping, data processing, reporting, and email workflows.',
-      role: 'Software Developer',
-      duration: '10 months',
       problem: 'Manual processes for data collection, processing, and reporting were time-consuming and error-prone.',
       solution: 'Developed comprehensive automation platform to streamline repetitive tasks and improve operational efficiency.',
       technologies: ['C#', 'JavaScript', 'SQL Server', '.NET Framework', 'ASP.NET MVC'],
@@ -225,6 +186,19 @@ export default function Portfolio() {
     }
   }, [isPaused]);
 
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'ArrowLeft') {
+        prevSlide();
+      } else if (event.key === 'ArrowRight') {
+        nextSlide();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   const currentProject = projects[currentIndex];
 
   return (
@@ -244,64 +218,26 @@ export default function Portfolio() {
           </p>
         </div>
 
-        {/* Company Logos Grid */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-8">Trusted by Industry Leaders</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
-            {projects.map((project, index) => (
-              <button
-                key={project.id}
-                onClick={() => setCurrentIndex(index)}
-                className={`group relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 ${
-                  index === currentIndex 
-                    ? 'border-purple-500 scale-105 shadow-purple-200 dark:shadow-purple-900' 
-                    : 'border-gray-200 dark:border-gray-700 hover:border-purple-300 hover:scale-102'
-                }`}
-              >
-                <div className="h-16 flex items-center justify-center">
-                  <img
-                    src={project.logo}
-                    alt={project.client}
-                    className="max-w-full max-h-full object-contain filter transition-all duration-300 group-hover:scale-110"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                      const parent = target.parentElement;
-                      if (parent) {
-                        parent.innerHTML = `<div class="w-full h-full bg-gradient-to-br ${project.gradient} rounded-lg flex items-center justify-center text-white font-bold text-xs text-center leading-tight px-2">${project.client}</div>`;
-                      }
-                    }}
-                  />
-                </div>
-                <div className="mt-3 text-center">
-                  <p className={`text-sm font-medium transition-all duration-300 ${
-                    index === currentIndex 
-                      ? 'text-purple-600 dark:text-purple-400' 
-                      : 'text-gray-600 dark:text-gray-400'
-                  }`}>
-                    {project.client}
-                  </p>
-                </div>
-                {index === currentIndex && (
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center">
-                    <CheckCircle className="h-4 w-4 text-white" />
-                  </div>
-                )}
-              </button>
-            ))}
-          </div>
-        </div>
+
 
         {/* Project Showcase Card */}
-        <div className="relative">
-          <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-700 overflow-hidden">
-            {/* Project Header with Gradient */}
-            <div className={`bg-gradient-to-r ${currentProject.gradient} p-8 text-white relative overflow-hidden`}>
-              <div className="absolute inset-0 bg-black/10"></div>
+        <div className="relative flex items-center">
+          {/* Left Arrow */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-0 z-10 p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200 dark:border-gray-700 group -translate-x-16"
+          >
+            <ChevronLeft className="h-6 w-6 text-gray-600 dark:text-gray-300 group-hover:text-purple-600" />
+          </button>
+
+          <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-700 overflow-hidden flex-1 mx-20">
+            {/* Project Header with Background Image */}
+            <div className="relative p-6 text-white overflow-hidden" style={{ backgroundImage: `url(${currentProject.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+              <div className="absolute inset-0 bg-black/60"></div>
               <div className="relative z-10">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
-                  <div className="flex items-center space-x-6">
-                    <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center p-4 shadow-lg">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center p-3 shadow-lg">
                       <img
                         src={currentProject.logo}
                         alt={currentProject.client}
@@ -311,31 +247,21 @@ export default function Portfolio() {
                           target.style.display = 'none';
                           const parent = target.parentElement;
                           if (parent) {
-                            parent.innerHTML = `<div class="w-full h-full bg-white/30 rounded-xl flex items-center justify-center text-white font-bold text-lg">${currentProject.client.charAt(0)}</div>`;
+                            parent.innerHTML = `<div class="w-full h-full bg-white/30 rounded-xl flex items-center justify-center text-white font-bold text-sm">${currentProject.client.charAt(0)}</div>`;
                           }
                         }}
                       />
                     </div>
                     <div>
-                      <h3 className="text-3xl font-bold mb-2">{currentProject.title}</h3>
-                      <p className="text-xl opacity-90 mb-2">{currentProject.client}</p>
-                      <div className="flex items-center space-x-4 text-sm opacity-80">
-                        <div className="flex items-center space-x-1">
-                          <Calendar className="h-4 w-4" />
-                          <span>{currentProject.duration}</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
-                          <Code className="h-4 w-4" />
-                          <span>{currentProject.role}</span>
-                        </div>
-                      </div>
+                      <h3 className="text-2xl font-bold mb-1">{currentProject.title}</h3>
+                      <p className="text-lg opacity-90">{currentProject.client}</p>
                     </div>
                   </div>
                   <a
                     href={currentProject.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm px-6 py-3 rounded-xl transition-all duration-300 mt-6 lg:mt-0 w-fit group shadow-lg"
+                    className="flex items-center space-x-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm px-6 py-3 rounded-lg transition-all duration-300 mt-4 lg:mt-0 w-fit group shadow-lg"
                   >
                     <span className="font-semibold">View Project</span>
                     <ExternalLink className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -345,144 +271,150 @@ export default function Portfolio() {
             </div>
 
             {/* Project Content */}
-            <div className="p-8">
-              {/* Hero Image and Metrics */}
-              <div className="grid lg:grid-cols-3 gap-8 mb-10">
-                <div className="lg:col-span-2">
-                  <img
-                    src={currentProject.image}
-                    alt={currentProject.title}
-                    className="w-full h-64 lg:h-80 object-cover rounded-2xl shadow-lg"
-                  />
+            <div className="p-6">
+              {/* Project Overview and Image */}
+              <div className="space-y-4 mb-6">
+                <div>
+                  <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Project Overview</h4>
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{currentProject.description}</p>
                 </div>
-                <div className="space-y-6">
-                  <div className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-700 dark:to-blue-900/20 rounded-2xl p-6 border border-gray-200 dark:border-gray-600">
-                    <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                      <TrendingUp className="h-6 w-6 text-blue-600 mr-2" />
-                      Project Impact
-                    </h4>
-                    <div className="space-y-4">
-                      {Object.entries(currentProject.metrics).map(([key, value], index) => (
-                        <div key={index} className="flex items-center justify-between">
-                          <span className="text-gray-600 dark:text-gray-300 font-medium capitalize">
-                            {key.replace('_', ' ')}
+                
+                <div className="grid lg:grid-cols-3 gap-6">
+                  {/* Results and Impact */}
+                  <div className="lg:col-span-2 space-y-4">
+                    <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-4 border border-green-200 dark:border-green-800">
+                      <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                        <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
+                        Results
+                      </h5>
+                      <p className="text-gray-700 dark:text-gray-300 font-medium">{currentProject.outcome}</p>
+                    </div>
+                    
+                    <div>
+                      <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Technologies</h5>
+                      <div className="flex flex-wrap gap-2">
+                        {currentProject.technologies.map((tech, index) => (
+                          <span
+                            key={index}
+                            className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-sm font-medium"
+                          >
+                            {tech}
                           </span>
-                          <span className="font-bold text-2xl text-gray-900 dark:text-white">{value}</span>
-                        </div>
-                      ))}
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Impact Metrics */}
+                  <div className="lg:col-span-1">
+                    <div className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-700 dark:to-blue-900/20 rounded-xl p-4 border border-gray-200 dark:border-gray-600">
+                      <h5 className="text-lg font-bold text-gray-900 dark:text-white mb-3 flex items-center">
+                        <TrendingUp className="h-5 w-5 text-blue-600 mr-2" />
+                        Impact
+                      </h5>
+                      <div className="space-y-2">
+                        {Object.entries(currentProject.metrics).map(([key, value], index) => (
+                          <div key={index} className="flex items-center justify-between">
+                            <span className="text-xs text-gray-600 dark:text-gray-300 capitalize">
+                              {key.replace('_', ' ')}
+                            </span>
+                            <span className="font-bold text-sm text-gray-900 dark:text-white">{value}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-
-              {/* Project Details Grid */}
-              <div className="grid lg:grid-cols-2 gap-10">
-                <div className="space-y-8">
-                  <div>
-                    <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Project Overview</h4>
-                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">{currentProject.description}</p>
-                    <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border-l-4 border-blue-500">
-                      <p className="text-blue-800 dark:text-blue-300 font-medium">{currentProject.role}</p>
+              
+              {/* Collapsible Details Section */}
+              <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
+                <button
+                  onClick={() => setIsDetailsExpanded(!isDetailsExpanded)}
+                  className="flex items-center justify-between w-full text-left p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-300"
+                >
+                  <span className="text-lg font-semibold text-gray-900 dark:text-white">Project Details</span>
+                  {isDetailsExpanded ? (
+                    <ChevronUp className="h-5 w-5 text-gray-600 dark:text-gray-300" />
+                  ) : (
+                    <ChevronDown className="h-5 w-5 text-gray-600 dark:text-gray-300" />
+                  )}
+                </button>
+                
+                {isDetailsExpanded && (
+                  <div className="mt-4 grid lg:grid-cols-2 gap-6">
+                    <div className="space-y-4">
+                      <div>
+                        <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">The Challenge</h5>
+                        <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{currentProject.problem}</p>
+                      </div>
+                      
+                      <div>
+                        <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">The Solution</h5>
+                        <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{currentProject.solution}</p>
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Key Features</h5>
+                      <ul className="space-y-2">
+                        {currentProject.features.map((feature, index) => (
+                          <li key={index} className="flex items-start space-x-2">
+                            <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                            <span className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
-
-                  <div>
-                    <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">The Challenge</h4>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{currentProject.problem}</p>
-                  </div>
-
-                  <div>
-                    <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">The Solution</h4>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{currentProject.solution}</p>
-                  </div>
-
-                  <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl p-6 border border-green-200 dark:border-green-800">
-                    <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-                      <CheckCircle className="h-6 w-6 text-green-600 mr-2" />
-                      Outcome & Results
-                    </h4>
-                    <p className="text-gray-700 dark:text-gray-300 font-medium text-lg">{currentProject.outcome}</p>
-                  </div>
-                </div>
-
-                <div className="space-y-8">
-                  <div>
-                    <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Key Features</h4>
-                    <ul className="space-y-3">
-                      {currentProject.features.map((feature, index) => (
-                        <li key={index} className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
-                          <span className="text-gray-600 dark:text-gray-300 leading-relaxed">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Technologies Used</h4>
-                    <div className="flex flex-wrap gap-3">
-                      {currentProject.technologies.map((tech, index) => (
-                        <span
-                          key={index}
-                          className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-xl font-medium shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                )}
               </div>
             </div>
           </div>
 
-          {/* Carousel Controls */}
-          <div className="flex justify-center items-center space-x-6 mt-8">
-            <button
-              onClick={prevSlide}
-              className="p-4 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200 dark:border-gray-700 group"
-            >
-              <ChevronLeft className="h-6 w-6 text-gray-600 dark:text-gray-300 group-hover:text-purple-600" />
-            </button>
+          {/* Right Arrow */}
+          <button
+            onClick={nextSlide}
+            className="absolute right-0 z-10 p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200 dark:border-gray-700 group translate-x-16"
+          >
+            <ChevronRight className="h-6 w-6 text-gray-600 dark:text-gray-300 group-hover:text-purple-600" />
+          </button>
 
+          {/* Play/Pause Control */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10">
             <button
               onClick={togglePause}
-              className="flex items-center space-x-3 bg-white dark:bg-gray-800 px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 group"
+              className="flex items-center space-x-2 bg-white/90 dark:bg-gray-800/90 px-4 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 group backdrop-blur-sm"
             >
               {isPaused ? (
                 <>
-                  <Play className="h-5 w-5 text-gray-600 dark:text-gray-300 group-hover:text-purple-600" />
-                  <span className="text-gray-600 dark:text-gray-300 font-medium group-hover:text-purple-600">Play</span>
+                  <Play className="h-4 w-4 text-gray-600 dark:text-gray-300 group-hover:text-purple-600" />
+                  <span className="text-sm text-gray-600 dark:text-gray-300 font-medium group-hover:text-purple-600">Play</span>
                 </>
               ) : (
                 <>
-                  <Pause className="h-5 w-5 text-gray-600 dark:text-gray-300 group-hover:text-purple-600" />
-                  <span className="text-gray-600 dark:text-gray-300 font-medium group-hover:text-purple-600">Pause</span>
+                  <Pause className="h-4 w-4 text-gray-600 dark:text-gray-300 group-hover:text-purple-600" />
+                  <span className="text-sm text-gray-600 dark:text-gray-300 font-medium group-hover:text-purple-600">Pause</span>
                 </>
               )}
-            </button>
-
-            <button
-              onClick={nextSlide}
-              className="p-4 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200 dark:border-gray-700 group"
-            >
-              <ChevronRight className="h-6 w-6 text-gray-600 dark:text-gray-300 group-hover:text-purple-600" />
             </button>
           </div>
 
           {/* Carousel Indicators */}
-          <div className="flex justify-center space-x-2 mt-6">
-            {projects.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex
-                    ? 'bg-purple-600 scale-125 shadow-lg'
-                    : 'bg-gray-300 dark:bg-gray-600 hover:bg-purple-400 hover:scale-110'
-                }`}
-              />
-            ))}
+          <div className="absolute bottom-4 right-6 z-10">
+            <div className="flex space-x-2">
+              {projects.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentIndex
+                      ? 'bg-white scale-125 shadow-lg'
+                      : 'bg-white/50 hover:bg-white/80 hover:scale-110'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
