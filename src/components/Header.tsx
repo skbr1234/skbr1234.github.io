@@ -46,12 +46,12 @@ export default function Header({ onDashboard }: HeaderProps) {
             >
               {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </button>
-            <button 
+            {/* <button 
               onClick={onDashboard}
               className="text-xs bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full transition-colors"
             >
               Dashboard
-            </button>
+            </button> */}
           </nav>
 
           <button
