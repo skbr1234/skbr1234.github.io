@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Send, Phone, Mail, MessageSquare } from 'lucide-react';
+import { sendContactEmail, ContactFormData } from '../services/emailService';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -18,19 +19,29 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real implementation, this would integrate with Google Forms or backend API
-    console.log('Form submitted:', formData);
-    alert('Thank you for your inquiry! I will get back to you within 24 hours.');
-    setFormData({
-      fullName: '',
-      email: '',
-      phone: '',
-      projectType: '',
-      budget: '',
-      description: ''
-    });
+    setIsSubmitting(true);
+    
+    const success = await sendContactEmail(formData as ContactFormData);
+    
+    if (success) {
+      alert('Thank you for your inquiry! I will get back to you within 24 hours.');
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        projectType: '',
+        budget: '',
+        description: ''
+      });
+    } else {
+      alert('Failed to send message. Please try again or contact me directly at nordiblesolutions@gmail.com');
+    }
+    
+    setIsSubmitting(false);
   };
 
   return (
@@ -186,10 +197,11 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl"
+                disabled={isSubmitting}
+                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 disabled:hover:scale-100 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl disabled:cursor-not-allowed"
               >
                 <Send className="h-5 w-5" />
-                <span>Send Message</span>
+                <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
               </button>
 
               <p className="text-xs text-blue-100 text-center">
