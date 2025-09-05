@@ -47,7 +47,7 @@ function App() {
         <Hero />
         <Services />
         <Portfolio />
-        <ClientStories />
+        {/* <ClientStories /> */}
         <About />
         <TechStack />
         <Contact />
