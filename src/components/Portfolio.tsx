@@ -140,6 +140,32 @@ export default function Portfolio() {
       gradient: 'from-orange-600 to-red-600'
     },
     {
+      id: 'daily-planner',
+      title: 'Daily Planner',
+      client: 'Personal Project',
+      logo: '/images/logos/daily-planner-logo.svg',
+      link: 'https://daily-planner.kabeershah.com',
+      description: 'A clean, intuitive daily task management application with date navigation and local storage persistence.',
+      problem: 'Need for a simple, distraction-free daily planner that works offline and maintains task history across different dates.',
+      solution: 'Built a lightweight HTML/JavaScript application with local storage for data persistence and intuitive date navigation.',
+      technologies: ['HTML5', 'JavaScript', 'Tailwind CSS', 'Local Storage'],
+      outcome: 'Created a fully functional daily planner with offline capabilities and cross-date task management',
+      image: 'https://images.pexels.com/photos/1226398/pexels-photo-1226398.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      metrics: {
+        features: '5+',
+        storage: 'Offline',
+        responsive: '100%'
+      },
+      features: [
+        'Date-based task organization',
+        'Local storage persistence',
+        'Task completion tracking',
+        'Inline task editing',
+        'Responsive design'
+      ],
+      gradient: 'from-indigo-600 to-purple-600'
+    },
+    {
       id: 'nextauto',
       title: 'NextAuto',
       client: 'NextServices HSS Pvt Ltd',
