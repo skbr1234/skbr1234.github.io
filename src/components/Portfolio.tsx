@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, ExternalLink, Users, TrendingUp, CheckCircle, Pause, Play, Award, ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ExternalLink, Users, TrendingUp, CheckCircle, Pause, Play, Award } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 
 export default function Portfolio() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const [isDetailsExpanded, setIsDetailsExpanded] = useState(false);
+
   const { isDark } = useTheme();
 
   const projects = [
@@ -16,8 +16,7 @@ export default function Portfolio() {
       logo: '/images/logos/InstaRem_logo.svg',
       link: 'https://www.instarem.com',
       description: 'Flagship fintech product for cost-effective foreign remittances serving millions of users globally.',
-      problem: 'Leading the technical development of a complex fintech platform handling millions in cross-border transactions with stringent regulatory requirements.',
-      solution: 'Architected and led full-stack development using modern technologies, implementing robust security measures and scalable microservices architecture.',
+
       technologies: ['Node.js', 'React.js', 'PostgreSQL', 'Mocha', 'AWS'],
       outcome: 'Successfully delivered a platform processing millions in remittances with 99.9% uptime',
       image: 'https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -26,13 +25,7 @@ export default function Portfolio() {
         transactions: '$100M+',
         uptime: '99.9%'
       },
-      features: [
-        'Real-time cross-border payment processing',
-        'Multi-currency support and conversion',
-        'Advanced fraud detection and security',
-        'Regulatory compliance across multiple countries',
-        'Scalable microservices architecture'
-      ],
+
       gradient: 'from-purple-600 to-blue-600'
     },
     {
@@ -42,8 +35,7 @@ export default function Portfolio() {
       logo: '/images/logos/GeneralElectric_logo.svg',
       link: 'https://www.gehealthcare.com/specialties/oncology-solutions/oncocare',
       description: 'Comprehensive oncology care assistant platform for clinicians to manage patient data and enable confident cancer care decision-making.',
-      problem: 'Healthcare professionals needed a unified platform to aggregate and visualize complex cancer patient data for better treatment decisions.',
-      solution: 'Developed a comprehensive platform with data visualization, patient management, and decision support tools using modern web technologies.',
+
       technologies: ['Node.js', 'PostgreSQL', 'React.js', 'AWS', 'Leadership'],
       outcome: 'Improved patient care coordination by 40% and reduced data processing time by 60%',
       image: 'https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -52,13 +44,7 @@ export default function Portfolio() {
         improvement: '40%',
         uptime: '99.8%'
       },
-      features: [
-        'Patient data aggregation and visualization',
-        'Clinical decision support tools',
-        'Real-time data synchronization',
-        'Advanced reporting and analytics',
-        'Cross-functional team leadership'
-      ],
+
       gradient: 'from-blue-600 to-teal-600'
     },
     {
@@ -68,8 +54,7 @@ export default function Portfolio() {
       logo: '/images/logos/TheParentInc-logo.webp',
       link: 'https://www.parents.vip',
       description: 'End-to-end influencer social media promotions, market surveys, and content creation process management platform.',
-      problem: 'Managing complex influencer marketing campaigns, content creation workflows, and market research processes across multiple platforms.',
-      solution: 'Architected a comprehensive platform with microservices and micro front-end architecture for scalable influencer management.',
+
       technologies: ['Node.js', 'MySQL', 'Mocha', 'Microservices', 'AWS', 'Redis', 'Python'],
       outcome: 'Streamlined influencer campaigns resulting in 200% increase in campaign efficiency',
       image: 'https://images.pexels.com/photos/1250452/pexels-photo-1250452.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -78,13 +63,7 @@ export default function Portfolio() {
         efficiency: '200%',
         uptime: '99.7%'
       },
-      features: [
-        'End-to-end campaign management',
-        'Influencer matching and analytics',
-        'Content creation workflow automation',
-        'Market survey and research tools',
-        'Microservices architecture'
-      ],
+
       gradient: 'from-pink-600 to-purple-600'
     },
     {
@@ -94,8 +73,7 @@ export default function Portfolio() {
       logo: '/images/logos/vantive_logo.png',
       link: 'https://www.vantive.com',
       description: 'Medical device support platform for remote diagnosis and troubleshooting of medical devices in healthcare facilities.',
-      problem: 'Healthcare facilities needed remote diagnostic capabilities for medical devices to reduce downtime and improve patient care.',
-      solution: 'Developed IoT-enabled remote diagnostic platform with real-time monitoring and automated troubleshooting capabilities.',
+
       technologies: ['Node.js', 'PostgreSQL', 'AWS IoT', 'Jest', 'TDD', 'AWS'],
       outcome: 'Reduced device downtime by 50% and improved remote diagnostic accuracy by 75%',
       image: 'https://images.pexels.com/photos/3786157/pexels-photo-3786157.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -104,13 +82,7 @@ export default function Portfolio() {
         downtime: '-50%',
         accuracy: '95%'
       },
-      features: [
-        'Remote device monitoring and diagnostics',
-        'IoT integration with medical devices',
-        'Automated troubleshooting workflows',
-        'Real-time alert systems',
-        'Test-driven development approach'
-      ],
+
       gradient: 'from-green-600 to-blue-600'
     },
     {
@@ -120,8 +92,7 @@ export default function Portfolio() {
       logo: '/images/logos/smartek21_logo.png',
       link: 'https://smartek21.com',
       description: 'Chatbot-building platform with Natural Language Processing for creating conversational AI chatbots.',
-      problem: 'Businesses needed an easy-to-use platform to create and deploy intelligent chatbots without technical expertise.',
-      solution: 'Built a comprehensive chatbot development platform with NLP capabilities and intuitive drag-and-drop interface.',
+
       technologies: ['AngularJS', 'Node.js', 'MySQL', 'AWS', 'NLP'],
       outcome: 'Enabled 500+ businesses to deploy chatbots, reducing customer service costs by 60%',
       image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -130,13 +101,7 @@ export default function Portfolio() {
         cost_reduction: '60%',
         accuracy: '90%'
       },
-      features: [
-        'Drag-and-drop chatbot builder',
-        'Natural Language Processing integration',
-        'Multi-channel deployment',
-        'Analytics and performance tracking',
-        'Custom workflow automation'
-      ],
+
       gradient: 'from-orange-600 to-red-600'
     },
     {
@@ -146,8 +111,7 @@ export default function Portfolio() {
       logo: '/images/logos/daily-planner-logo.svg',
       link: 'https://daily-planner.kabeershah.com',
       description: 'A clean, intuitive daily task management application with date navigation and local storage persistence.',
-      problem: 'Need for a simple, distraction-free daily planner that works offline and maintains task history across different dates.',
-      solution: 'Built a lightweight HTML/JavaScript application with local storage for data persistence and intuitive date navigation.',
+
       technologies: ['HTML5', 'JavaScript', 'Tailwind CSS', 'Local Storage'],
       outcome: 'Created a fully functional daily planner with offline capabilities and cross-date task management',
       image: 'https://images.pexels.com/photos/1226398/pexels-photo-1226398.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -156,13 +120,7 @@ export default function Portfolio() {
         storage: 'Offline',
         responsive: '100%'
       },
-      features: [
-        'Date-based task organization',
-        'Local storage persistence',
-        'Task completion tracking',
-        'Inline task editing',
-        'Responsive design'
-      ],
+
       gradient: 'from-indigo-600 to-purple-600'
     },
     {
@@ -172,8 +130,7 @@ export default function Portfolio() {
       logo: '/images/logos/nextservices_logo.png',
       link: 'https://nextservices.com/',
       description: 'Internal process automation software for automating web scraping, data processing, reporting, and email workflows.',
-      problem: 'Manual processes for data collection, processing, and reporting were time-consuming and error-prone.',
-      solution: 'Developed comprehensive automation platform to streamline repetitive tasks and improve operational efficiency.',
+
       technologies: ['C#', 'JavaScript', 'SQL Server', '.NET Framework', 'ASP.NET MVC'],
       outcome: 'Automated 80% of manual processes, saving 40+ hours per week and reducing errors by 90%',
       image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -182,13 +139,7 @@ export default function Portfolio() {
         time_saved: '40h/week',
         error_reduction: '90%'
       },
-      features: [
-        'Automated web scraping workflows',
-        'Data processing and transformation',
-        'Automated reporting systems',
-        'Email workflow automation',
-        'Process monitoring and logging'
-      ],
+
       gradient: 'from-emerald-600 to-teal-600'
     }
   ];
@@ -352,49 +303,7 @@ export default function Portfolio() {
                   </div>
                 </div>
               </div>
-              
-              {/* Collapsible Details Section */}
-              <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
-                <button
-                  onClick={() => setIsDetailsExpanded(!isDetailsExpanded)}
-                  className="flex items-center justify-between w-full text-left p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-300"
-                >
-                  <span className="text-lg font-semibold text-gray-900 dark:text-white">Project Details</span>
-                  {isDetailsExpanded ? (
-                    <ChevronUp className="h-5 w-5 text-gray-600 dark:text-gray-300" />
-                  ) : (
-                    <ChevronDown className="h-5 w-5 text-gray-600 dark:text-gray-300" />
-                  )}
-                </button>
-                
-                {isDetailsExpanded && (
-                  <div className="mt-4 grid lg:grid-cols-2 gap-6">
-                    <div className="space-y-4">
-                      <div>
-                        <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">The Challenge</h5>
-                        <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{currentProject.problem}</p>
-                      </div>
-                      
-                      <div>
-                        <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">The Solution</h5>
-                        <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{currentProject.solution}</p>
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Key Features</h5>
-                      <ul className="space-y-2">
-                        {currentProject.features.map((feature, index) => (
-                          <li key={index} className="flex items-start space-x-2">
-                            <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                            <span className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                )}
-              </div>
+
             </div>
           </div>
 
