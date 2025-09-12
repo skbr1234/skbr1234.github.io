@@ -5,6 +5,7 @@ import { useTheme } from '../contexts/ThemeContext';
 export default function Portfolio() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [imageErrors, setImageErrors] = useState<Set<string>>(new Set());
 
   const { isDark } = useTheme();
 
@@ -70,7 +71,7 @@ export default function Portfolio() {
       id: 'rst-baxter',
       title: 'RST - Remote Service Tool',
       client: 'Vantive Healthcare',
-      logo: '/images/logos/vantive_logo.png',
+      logo: '/images/logos/vantive_logo.jpg',
       link: 'https://www.vantive.com',
       description: 'Medical device support platform for remote diagnosis and troubleshooting of medical devices in healthcare facilities.',
 
@@ -109,7 +110,7 @@ export default function Portfolio() {
       title: 'Daily Planner',
       client: 'Personal Project',
       logo: '/images/logos/daily-planner-logo.svg',
-      link: 'https://daily-planner.kabeershah.com',
+      link: 'https://planmydaily.com/',
       description: 'A clean, intuitive daily task management application with date navigation and local storage persistence.',
 
       technologies: ['HTML5', 'JavaScript', 'Tailwind CSS', 'Local Storage'],
@@ -122,6 +123,25 @@ export default function Portfolio() {
       },
 
       gradient: 'from-indigo-600 to-purple-600'
+    },
+    {
+      id: 'zerodha-sandbox',
+      title: 'Zerodha Sandbox',
+      client: 'Personal Project',
+      logo: '/images/logos/zerodha-logo.png',
+      link: 'https://skbr1234.github.io/zerodha-sandbox/',
+      description: 'Interactive trading API sandbox demonstrating Zerodha Kite Connect integration with comprehensive endpoints for orders, portfolio, quotes, and market data.',
+
+      technologies: ['TypeScript', 'HTML5', 'CSS3', 'REST API', 'Trading APIs'],
+      outcome: 'Built comprehensive trading API demonstration with real-time dummy data simulation and interactive documentation',
+      image: 'https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      metrics: {
+        endpoints: '25+',
+        coverage: '100%',
+        interactive: 'Yes'
+      },
+
+      gradient: 'from-blue-600 to-indigo-600'
     },
     {
       id: 'nextauto',
@@ -215,19 +235,21 @@ export default function Portfolio() {
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                   <div className="flex items-center space-x-4">
                     <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center p-3 shadow-lg">
-                      <img
-                        src={currentProject.logo}
-                        alt={currentProject.client}
-                        className="max-w-full max-h-full object-contain"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = 'none';
-                          const parent = target.parentElement;
-                          if (parent) {
-                            parent.innerHTML = `<div class="w-full h-full bg-white/30 rounded-xl flex items-center justify-center text-white font-bold text-sm">${currentProject.client.charAt(0)}</div>`;
-                          }
-                        }}
-                      />
+                      {imageErrors.has(currentProject.id) ? (
+                        <div className="w-full h-full bg-white/30 rounded-xl flex items-center justify-center text-white font-bold text-sm">
+                          {currentProject.client.charAt(0)}
+                        </div>
+                      ) : (
+                        <img
+                          key={currentProject.id}
+                          src={currentProject.logo}
+                          alt={currentProject.client}
+                          className="max-w-full max-h-full object-contain"
+                          onError={() => {
+                            setImageErrors(prev => new Set(prev).add(currentProject.id));
+                          }}
+                        />
+                      )}
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold mb-1">{currentProject.title}</h3>
@@ -336,21 +358,7 @@ export default function Portfolio() {
           </div>
 
           {/* Carousel Indicators */}
-          <div className="absolute bottom-4 right-6 z-10">
-            <div className="flex space-x-2">
-              {projects.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === currentIndex
-                      ? 'bg-white scale-125 shadow-lg'
-                      : 'bg-white/50 hover:bg-white/80 hover:scale-110'
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
+          
         </div>
 
         {/* Bottom CTA */}
