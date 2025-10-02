@@ -5,22 +5,22 @@ export default function Services() {
   const services = [
     {
       icon: Globe,
-      title: 'Website Development',
-      description: 'Professional business websites that establish your online presence and drive conversions.',
+      title: 'Modern Websites',
+      description: 'Beautiful, responsive websites built with React and modern web technologies.',
       features: ['Responsive Design', 'SEO Optimization', 'CMS Integration', 'Performance Optimization'],
       color: 'bg-purple-500'
     },
     {
       icon: ShoppingCart,
-      title: 'E-Commerce Solutions',
-      description: 'Custom e-commerce platforms and Shopify solutions with secure payment gateways.',
+      title: 'E-Commerce Apps',
+      description: 'Full-featured online stores with custom functionality and seamless user experiences.',
       features: ['Shopify Development', 'Payment Integration', 'Inventory Management', 'Mobile Commerce'],
       color: 'bg-orange-500'
     },
     {
       icon: Settings,
-      title: 'Custom Web Applications',
-      description: 'Bespoke web applications including portals, dashboards, and internal business tools.',
+      title: 'Web Applications',
+      description: 'Complex web apps with real-time features, APIs, and database integration.',
       features: ['Dashboard Development', 'API Integration', 'Database Design', 'Cloud Deployment'],
       color: 'bg-pink-500'
     }
@@ -31,10 +31,10 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Services That Drive Results
+            What I Love Building
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Comprehensive web development services tailored to your business needs
+            From simple websites to complex web applications - here's what I enjoy creating
           </p>
         </div>
 

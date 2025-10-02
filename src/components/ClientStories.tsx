@@ -7,7 +7,7 @@ export default function ClientStories() {
       quote: "Kabeer's technical expertise and leadership were instrumental in delivering our healthcare platform ahead of schedule. His attention to detail and architectural vision made all the difference.",
       author: "Dr. Sarah Chen",
       role: "Product Manager",
-      company: "GE Healthcare",
+      company: "General Electric Healthcare",
       rating: 5
     },
     {

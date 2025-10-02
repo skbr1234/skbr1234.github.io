@@ -144,6 +144,23 @@ export default function Portfolio() {
       gradient: 'from-blue-600 to-indigo-600'
     },
     {
+      id: 'nerdspal',
+      title: 'NerdsPal.com',
+      client: 'Personal Project',
+      logo: '/images/logos/nerdspal-logo.svg',
+      link: 'https://www.producthunt.com/products/nersdpal-com',
+      description: 'Platform connecting nerds and geeks with like-minded individuals for meaningful conversations and collaborations.',
+      technologies: ['React.js', 'Node.js', 'AI/ML', 'WebSocket', 'MongoDB'],
+      outcome: 'Built a community platform that brings together tech enthusiasts and facilitates meaningful connections',
+      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      metrics: {
+        users: 'N/A',
+        connections: 'N/A',
+        engagement: 'N/A'
+      },
+      gradient: 'from-cyan-600 to-blue-600'
+    },
+    {
       id: 'nextauto',
       title: 'NextAuto',
       client: 'NextServices HSS Pvt Ltd',
@@ -208,10 +225,10 @@ export default function Portfolio() {
             <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Portfolio Showcase</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Enterprise Solutions & Innovation
+            Projects I've Built
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Delivering scalable solutions for Fortune 500 companies and innovative startups across healthcare, fintech, and technology sectors
+            Here are some of the applications I've had the pleasure of working on - from healthcare platforms to fintech solutions
           </p>
         </div>
 
@@ -364,9 +381,9 @@ export default function Portfolio() {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Ready to Build Something Amazing?</h3>
+            <h3 className="text-2xl font-bold mb-4">Want to Build Something Cool Together?</h3>
             <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-              From Fortune 500 healthcare solutions to innovative fintech platforms, I deliver enterprise-grade applications that drive real business results.
+              I love working on interesting projects and solving complex problems. Let's chat about your ideas!
             </p>
             <button
               onClick={() => {
@@ -377,7 +394,7 @@ export default function Portfolio() {
               }}
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              Start Your Project
+              Get In Touch
             </button>
           </div>
         </div>

@@ -5,23 +5,23 @@ export default function About() {
   const qualities = [
     {
       icon: Target,
-      title: 'End-to-End Expertise',
-      description: 'From architectural design to deployment, I handle every aspect of web development with precision.'
+      title: 'Full-Stack Skills',
+      description: 'From React frontends to Node.js backends, I love working across the entire stack.'
     },
     {
       icon: Zap,
-      title: 'Agile & TDD Methodologies',
-      description: 'Proven track record using agile development and test-driven development for reliable results.'
+      title: 'Clean Code Advocate',
+      description: 'I write tests first and believe in code that tells a story - readable, maintainable, and reliable.'
     },
     {
       icon: Users,
-      title: 'Enterprise Experience',
-      description: 'Worked with Fortune 500 companies including GE Healthcare and Nium, delivering mission-critical solutions.'
+      title: 'Real-World Impact',
+      description: 'Built applications used by millions - from healthcare platforms to fintech solutions.'
     },
     {
       icon: Lightbulb,
-      title: 'Go Do-It Attitude',
-      description: 'Problem-solver by nature with a proactive approach to overcoming technical challenges.'
+      title: 'Problem Solver',
+      description: 'I love tackling complex challenges and finding creative solutions that actually work.'
     }
   ];
 
@@ -39,22 +39,18 @@ export default function About() {
 
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              About Kabeer Shah
+              About Me
             </h2>
             
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              I'm a seasoned software development consultant with a passion for creating 
-              scalable web solutions that drive business growth. With extensive experience 
-              working with industry leaders like GE Healthcare and Nium, I bring enterprise-level 
-              expertise to projects of all sizes.
+              I'm a passionate full-stack developer who loves turning complex problems into 
+              elegant solutions. I've had the opportunity to work on some amazing projects 
+              including healthcare platforms at General Electric and fintech applications at Nium.
             </p>
 
             <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              My approach combines technical excellence with business acumen, ensuring that 
-              every solution I deliver not only meets technical requirements but also drives 
-              measurable business outcomes. I specialize in end-to-end architectural design, 
-              leveraging agile methodologies and test-driven development to ensure reliable, 
-              maintainable solutions.
+              When I'm not coding, I'm probably learning a new technology. I believe in writing clean, maintainable code and 
+              creating applications that users actually enjoy using.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6">

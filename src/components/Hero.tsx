@@ -15,28 +15,29 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-              Your Partner in{' '}
+              Hi, I'm{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-orange-600">
-                Scalable Web Development
+                Kabeer Shah
               </span>
+              <br />Full-Stack Developer
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mt-6 leading-relaxed">
-              From E-Commerce to Custom Web Solutions. I help businesses build robust, 
-              scalable web applications that drive growth and deliver exceptional user experiences.
+              I love building web applications that solve real problems. From fintech platforms 
+              to healthcare solutions, I turn ideas into scalable, user-friendly applications.
             </p>
             
             <div className="mt-8 space-y-4">
               <div className="flex items-center space-x-3">
                 <CheckCircle className="h-5 w-5 text-orange-600" />
-                <span className="text-gray-700 dark:text-gray-300">End-to-End Architecture & Development</span>
+                <span className="text-gray-700 dark:text-gray-300">Full-Stack Development (React, Node.js, Python)</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="h-5 w-5 text-orange-600" />
-                <span className="text-gray-700 dark:text-gray-300">Proven Track Record with Fortune 500 Companies</span>
+                <span className="text-gray-700 dark:text-gray-300">Experience with Healthcare & Fintech Projects</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="h-5 w-5 text-orange-600" />
-                <span className="text-gray-700 dark:text-gray-300">Agile & TDD Methodologies</span>
+                <span className="text-gray-700 dark:text-gray-300">Clean Code & Test-Driven Development</span>
               </div>
             </div>
 
@@ -44,7 +45,7 @@ export default function Hero() {
               onClick={scrollToContact}
               className="mt-10 bg-gradient-to-r from-purple-600 to-orange-600 hover:from-purple-700 hover:to-orange-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 flex items-center space-x-2 shadow-lg hover:shadow-xl"
             >
-              <span>Get a Free Consultation</span>
+              <span>Let's Build Something Cool</span>
               <ArrowRight className="h-5 w-5" />
             </button>
           </div>
