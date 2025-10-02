@@ -31,9 +31,9 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Professional developer workspace"
-              className="rounded-2xl shadow-2xl"
+              src="/images/my-photos/church-street-photo.jpeg"
+              alt="Kabeer Shah"
+              className="rounded-2xl shadow-2xl w-full h-auto object-cover"
             />
           </div>
 

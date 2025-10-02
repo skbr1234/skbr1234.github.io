@@ -53,9 +53,9 @@ export default function Hero() {
           <div className="relative">
             <div className="relative z-10">
               <img
-                src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Professional software development"
-                className="rounded-2xl shadow-2xl"
+                src="/images/my-photos/mountain-photo.jpeg"
+                alt="Kabeer Shah - Full-Stack Developer"
+                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
               />
             </div>
             <div className="absolute -top-4 -right-4 w-72 h-72 bg-purple-200 dark:bg-purple-900 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
