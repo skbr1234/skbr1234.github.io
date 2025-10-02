@@ -38,7 +38,7 @@ export default function Contact() {
         description: ''
       });
     } else {
-      alert('Failed to send message. Please try again or contact me directly at nordiblesolutions@gmail.com');
+      alert('Failed to send message. Please try again or contact me directly at meetkabeershah@gmail.com');
     }
     
     setIsSubmitting(false);
@@ -65,7 +65,7 @@ export default function Contact() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <Mail className="h-5 w-5 text-blue-400" />
-                    <span>nordiblesolutions@gmail.com</span>
+                    <span>meetkabeershah@gmail.com</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Phone className="h-5 w-5 text-blue-400" />

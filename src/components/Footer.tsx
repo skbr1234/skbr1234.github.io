@@ -23,7 +23,7 @@ export default function Footer({ onPrivacyClick, onTermsClick }: FooterProps) {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-purple-400" />
-                <span className="text-sm">nordiblesolutions@gmail.com</span>
+                <span className="text-sm">meetkabeershah@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-purple-400" />

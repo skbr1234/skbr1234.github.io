@@ -7,7 +7,7 @@ import Portfolio from './components/Portfolio';
 import ClientStories from './components/ClientStories';
 import About from './components/About';
 import TechStack from './components/TechStack';
-import Contact from './components/Contact';
+import AIChat from './components/AIChat';
 import Footer from './components/Footer';
 import LeadDashboard from './components/LeadDashboard';
 import PrivacyPolicy from './components/PrivacyPolicy';
@@ -50,7 +50,7 @@ function App() {
         {/* <ClientStories /> */}
         <About />
         <TechStack />
-        <Contact />
+        <AIChat />
         <Footer 
           onPrivacyClick={() => setCurrentView('privacy')}
           onTermsClick={() => setCurrentView('terms')}

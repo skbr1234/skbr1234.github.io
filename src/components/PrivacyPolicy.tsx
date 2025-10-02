@@ -101,7 +101,7 @@ export default function PrivacyPolicy({ onBack }: PrivacyPolicyProps) {
               </p>
               <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                 <p className="text-gray-600 dark:text-gray-300">
-                  <strong>Email:</strong> nordiblesolutions@gmail.com<br />
+                  <strong>Email:</strong> meetkabeershah@gmail.com<br />
                   <strong>Phone:</strong> +91-9773207706<br />
                   <strong>WhatsApp:</strong> Available
                 </p>
