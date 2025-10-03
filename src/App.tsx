@@ -2,8 +2,14 @@ import React, { useState } from 'react';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import TrustSignals from './components/TrustSignals';
 import Services from './components/Services';
+import BusinessBenefits from './components/BusinessBenefits';
+import Pricing from './components/Pricing';
 import Portfolio from './components/Portfolio';
+import Testimonials from './components/Testimonials';
+import Process from './components/Process';
+import Availability from './components/Availability';
 import ClientStories from './components/ClientStories';
 import About from './components/About';
 import TechStack from './components/TechStack';
@@ -45,8 +51,15 @@ function App() {
       <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
         <Header onDashboard={() => setCurrentView('dashboard')} />
         <Hero />
+        {/* freelancing features are already added to the site, just uncomment the freelancing secions instead of developing new ones */}
+        {/* freelancing <TrustSignals /> */}
         <Services />
+        {/* freelancing <BusinessBenefits /> */}
+        {/* freelancing <Pricing /> */}
         <Portfolio />
+        {/* freelancing <Testimonials /> */}
+        {/* freelancing <Process /> */}
+        <Availability />
         {/* <ClientStories /> */}
         <About />
         <TechStack />

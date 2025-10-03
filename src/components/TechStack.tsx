@@ -7,62 +7,74 @@ export default function TechStack() {
     { 
       name: 'React', 
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-      color: 'bg-blue-50 dark:bg-blue-900/20' 
+      color: 'bg-blue-50 dark:bg-blue-900/20',
+      proficiency: 95
     },
     { 
       name: 'Node.js', 
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-      color: 'bg-green-50 dark:bg-green-900/20' 
+      color: 'bg-green-50 dark:bg-green-900/20',
+      proficiency: 90
     },
     { 
       name: 'TypeScript', 
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-      color: 'bg-blue-50 dark:bg-blue-900/20' 
+      color: 'bg-blue-50 dark:bg-blue-900/20',
+      proficiency: 85
     },
     { 
       name: 'Python', 
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-      color: 'bg-yellow-50 dark:bg-yellow-900/20' 
+      color: 'bg-yellow-50 dark:bg-yellow-900/20',
+      proficiency: 80
     },
     { 
       name: 'C#', 
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
-      color: 'bg-purple-50 dark:bg-purple-900/20' 
+      color: 'bg-purple-50 dark:bg-purple-900/20',
+      proficiency: 75
     },
     { 
       name: 'PostgreSQL', 
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
-      color: 'bg-blue-50 dark:bg-blue-900/20' 
+      color: 'bg-blue-50 dark:bg-blue-900/20',
+      proficiency: 85
     },
     { 
       name: 'MongoDB', 
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
-      color: 'bg-green-50 dark:bg-green-900/20' 
+      color: 'bg-green-50 dark:bg-green-900/20',
+      proficiency: 80
     },
     { 
       name: 'AWS', 
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
-      color: 'bg-orange-50 dark:bg-orange-900/20' 
+      color: 'bg-orange-50 dark:bg-orange-900/20',
+      proficiency: 85
     },
     { 
       name: 'Docker', 
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
-      color: 'bg-blue-50 dark:bg-blue-900/20' 
+      color: 'bg-blue-50 dark:bg-blue-900/20',
+      proficiency: 75
     },
     { 
       name: 'Next.js', 
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
-      color: 'bg-gray-50 dark:bg-gray-800' 
+      color: 'bg-gray-50 dark:bg-gray-800',
+      proficiency: 90
     },
     { 
       name: 'React Native', 
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-      color: 'bg-cyan-50 dark:bg-cyan-900/20' 
+      color: 'bg-cyan-50 dark:bg-cyan-900/20',
+      proficiency: 70
     },
     { 
       name: 'Redis', 
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg',
-      color: 'bg-red-50 dark:bg-red-900/20' 
+      color: 'bg-red-50 dark:bg-red-900/20',
+      proficiency: 75
     }
   ];
 
