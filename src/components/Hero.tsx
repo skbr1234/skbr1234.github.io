@@ -14,14 +14,14 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
               Hi, I'm{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-orange-600">
                 Kabeer Shah
               </span>
               <br />Full-Stack Developer
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mt-6 leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mt-6 leading-relaxed">
               I love building web applications that solve real problems. From fintech platforms 
               to healthcare solutions, I turn ideas into scalable, user-friendly applications.
             </p>
@@ -29,21 +29,21 @@ export default function Hero() {
             <div className="mt-8 space-y-4">
               <div className="flex items-center space-x-3">
                 <CheckCircle className="h-5 w-5 text-orange-600" />
-                <span className="text-gray-700 dark:text-gray-300">Full-Stack Development (React, Node.js, Python)</span>
+                <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Full-Stack Development (React, Node.js, Python)</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="h-5 w-5 text-orange-600" />
-                <span className="text-gray-700 dark:text-gray-300">Experience with Healthcare & Fintech Projects</span>
+                <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Experience with Healthcare & Fintech Projects</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="h-5 w-5 text-orange-600" />
-                <span className="text-gray-700 dark:text-gray-300">Clean Code & Test-Driven Development</span>
+                <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Clean Code & Test-Driven Development</span>
               </div>
             </div>
 
             <button
               onClick={scrollToContact}
-              className="mt-10 bg-gradient-to-r from-purple-600 to-orange-600 hover:from-purple-700 hover:to-orange-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 flex items-center space-x-2 shadow-lg hover:shadow-xl"
+              className="mt-10 bg-gradient-to-r from-purple-600 to-orange-600 hover:from-purple-700 hover:to-orange-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl w-full sm:w-auto"
             >
               <span>Let's Build Something Cool</span>
               <ArrowRight className="h-5 w-5" />

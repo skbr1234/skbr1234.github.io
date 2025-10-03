@@ -5,7 +5,7 @@ export default function Availability() {
   return (
     <section className="py-12 bg-gradient-to-r from-purple-600 to-blue-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-6 text-white text-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-white text-center">
           <div className="flex flex-col items-center">
             <div className="bg-white/20 p-3 rounded-full mb-3">
               <Clock className="h-6 w-6" />

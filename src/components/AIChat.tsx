@@ -240,7 +240,7 @@ export default function AIChat() {
 
             <div className="mt-6 text-center">
               <p className="text-blue-100 text-sm mb-4">Or reach out directly:</p>
-              <div className="grid grid-cols-2 gap-4 mb-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                 <a href="mailto:meetkabeershah@gmail.com" className="flex items-center justify-center space-x-2 bg-white/20 hover:bg-white/30 px-4 py-3 rounded-lg transition-colors">
                   <Mail className="h-4 w-4" />
                   <span>Email</span>

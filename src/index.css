@@ -5,3 +5,11 @@
 html, body {
   overflow-x: hidden;
 }
+
+/* Touch-friendly interactions */
+@media (max-width: 768px) {
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}

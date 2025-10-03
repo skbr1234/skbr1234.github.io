@@ -111,16 +111,16 @@ export default function TechStack() {
 
         {/* Technology Carousel */}
         <div className="w-full px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between space-x-4 overflow-hidden">
+          <div className="flex items-center justify-between space-x-2 sm:space-x-4 overflow-hidden">
             {getVisibleTechnologies().map((tech, index) => (
               <div 
                 key={`${tech.name}-${index}`}
-                className={`${tech.color} rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-gray-200 dark:border-gray-600 group flex-shrink-0 w-32 h-32 flex flex-col items-center justify-center backdrop-blur-sm bg-opacity-80`}
+                className={`${tech.color} rounded-2xl p-3 sm:p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-gray-200 dark:border-gray-600 group flex-shrink-0 w-20 h-20 sm:w-32 sm:h-32 flex flex-col items-center justify-center backdrop-blur-sm bg-opacity-80`}
               >
                 <img 
                   src={tech.logo} 
                   alt={tech.name}
-                  className="h-12 w-12 group-hover:scale-110 transition-transform duration-300 mb-3 filter drop-shadow-sm"
+                  className="h-6 w-6 sm:h-12 sm:w-12 group-hover:scale-110 transition-transform duration-300 mb-1 sm:mb-3 filter drop-shadow-sm"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.style.display = 'none';
@@ -130,7 +130,7 @@ export default function TechStack() {
                     }
                   }}
                 />
-                <span className="font-semibold text-gray-900 dark:text-white text-center text-sm">{tech.name}</span>
+                <span className="font-semibold text-gray-900 dark:text-white text-center text-xs sm:text-sm">{tech.name}</span>
               </div>
             ))}
           </div>
