@@ -5,10 +5,11 @@ export default function Pricing() {
   const packages = [
     {
       name: 'Website',
-      price: '$500',
+      price: '₹40,000',
       duration: '1-2 weeks',
       description: 'Perfect for small businesses and personal brands',
       features: [
+        'FREE Consultation Call',
         'Responsive Design',
         'SEO Optimization',
         'Contact Forms',
@@ -20,10 +21,11 @@ export default function Pricing() {
     },
     {
       name: 'E-Commerce',
-      price: '$1,500',
+      price: '₹1,20,000',
       duration: '3-4 weeks',
       description: 'Complete online store with payment integration',
       features: [
+        'FREE Consultation Call',
         'Product Management',
         'Payment Gateway',
         'Inventory System',
@@ -35,10 +37,11 @@ export default function Pricing() {
     },
     {
       name: 'Web Application',
-      price: '$3,000+',
+      price: '₹2,40,000+',
       duration: '6-12 weeks',
       description: 'Custom web applications with advanced features',
       features: [
+        'FREE Consultation Call',
         'Custom Development',
         'Database Design',
         'API Integration',
@@ -50,8 +53,8 @@ export default function Pricing() {
     }
   ];
 
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
+  const scrollToConsultation = () => {
+    const element = document.getElementById('consultation');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -61,11 +64,15 @@ export default function Pricing() {
     <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
+          <div className="inline-flex items-center space-x-2 bg-green-100 dark:bg-green-900/30 px-6 py-3 rounded-full mb-6">
+            <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+            <span className="text-green-700 dark:text-green-300 font-semibold">FREE 30-min Consultation Call</span>
+          </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Simple, Transparent Pricing
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Choose the package that fits your needs. All projects include free consultation and post-launch support.
+            Choose the package that fits your needs. All projects start with a free consultation call to understand your requirements.
           </p>
         </div>
 
@@ -98,7 +105,7 @@ export default function Pricing() {
               </ul>
 
               <button
-                onClick={scrollToContact}
+                onClick={scrollToConsultation}
                 className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 ${pkg.popular ? 'bg-purple-600 hover:bg-purple-700 text-white' : 'bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-900 dark:text-white'}`}
               >
                 <span>Get Started</span>
@@ -110,13 +117,13 @@ export default function Pricing() {
 
         <div className="text-center mt-12">
           <p className="text-gray-600 dark:text-gray-300 mb-4">
-            Need something custom? Let's discuss your specific requirements.
+            Need something custom? Let's start with a free 30-minute consultation call.
           </p>
           <button
-            onClick={scrollToContact}
-            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+            onClick={scrollToConsultation}
+            className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
-            Get Custom Quote
+            Book Free Consultation
           </button>
         </div>
       </div>

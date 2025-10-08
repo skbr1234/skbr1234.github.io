@@ -110,14 +110,14 @@ export default function AIChat() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-teal-900 text-white">
+    <section id="consultation" className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-teal-900 text-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Ask Me Anything
+            Book Your Free 30-Minute Consulting Call
           </h2>
           <p className="text-xl text-blue-100">
-            Chat with my AI assistant to learn about my experience and projects
+            Chat with my AI assistant first, or book a direct consultation call to discuss your project
           </p>
         </div>
 

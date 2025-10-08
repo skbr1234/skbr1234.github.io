@@ -387,7 +387,7 @@ export default function Portfolio() {
             </p>
             <button
               onClick={() => {
-                const element = document.getElementById('contact');
+                const element = document.getElementById('consultation');
                 if (element) {
                   element.scrollIntoView({ behavior: 'smooth' });
                 }

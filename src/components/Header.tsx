@@ -19,7 +19,21 @@ export default function Header({ onDashboard }: HeaderProps) {
   };
 
   return (
-    <header className="w-full bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
+    <>
+      {/* Free Consultation Banner */}
+      <div className="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white py-2 text-center">
+        <div className="flex items-center justify-center space-x-2 text-sm font-semibold">
+          <span className="animate-bounce">📞</span>
+          <span>FREE 30-Minute Consultation Call Available!</span>
+          <button 
+            onClick={() => scrollToSection('consultation')}
+            className="ml-2 bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full text-xs transition-colors"
+          >
+            Book Now
+          </button>
+        </div>
+      </div>
+      <header className="w-full bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
@@ -37,8 +51,14 @@ export default function Header({ onDashboard }: HeaderProps) {
             <button onClick={() => scrollToSection('about')} className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
               About
             </button>
-            <button onClick={() => scrollToSection('contact')} className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+            <button onClick={() => scrollToSection('consultation')} className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
               Contact
+            </button>
+            <button
+              onClick={() => scrollToSection('consultation')}
+              className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-4 py-2 rounded-full font-semibold text-sm transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse"
+            >
+              📞 FREE 30-min Call
             </button>
             <button
               onClick={toggleTheme}
@@ -74,8 +94,11 @@ export default function Header({ onDashboard }: HeaderProps) {
               <button onClick={() => scrollToSection('about')} className="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                 About
               </button>
-              <button onClick={() => scrollToSection('contact')} className="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+              <button onClick={() => scrollToSection('consultation')} className="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                 Contact
+              </button>
+              <button onClick={() => scrollToSection('consultation')} className="block mx-3 my-2 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-4 py-2 rounded-full font-semibold text-sm transition-all duration-300 text-center">
+                📞 FREE 30-min Call
               </button>
               <button
                 onClick={toggleTheme}
@@ -89,5 +112,6 @@ export default function Header({ onDashboard }: HeaderProps) {
         )}
       </div>
     </header>
+    </>
   );
 }

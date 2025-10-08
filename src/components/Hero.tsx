@@ -2,8 +2,8 @@ import React from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 export default function Hero() {
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
+  const scrollToConsultation = () => {
+    const element = document.getElementById('consultation');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -42,7 +42,7 @@ export default function Hero() {
             </div>
 
             <button
-              onClick={scrollToContact}
+              onClick={scrollToConsultation}
               className="mt-10 bg-gradient-to-r from-purple-600 to-orange-600 hover:from-purple-700 hover:to-orange-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl w-full sm:w-auto"
             >
               <span>Let's Build Something Cool</span>
