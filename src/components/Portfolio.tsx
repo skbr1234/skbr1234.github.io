@@ -144,6 +144,33 @@ export default function Portfolio() {
       gradient: 'from-blue-600 to-indigo-600'
     },
     {
+      id: 'ai-markdown-editor',
+      title: 'AI Markdown Editor',
+      client: 'Personal Project',
+      logo: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJiZ0dyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojOGI1Y2Y2O3N0b3Atb3BhY2l0eToxIiAvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2E4NTVmNztzdG9wLW9wYWNpdHk6MSIgLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0idGV4dEdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I2ZmZmZmZjtzdG9wLW9wYWNpdHk6MSIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNmM2U4ZmY7c3RvcC1vcGFjaXR5OjEiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDUiIGZpbGw9InVybCgjYmdHcmFkaWVudCkiIHN0cm9rZT0iIzdjM2FlZCIgc3Ryb2tlLXdpZHRoPSIyIi8+PGcgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEuNSIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC4zIj48Y2lyY2xlIGN4PSIzNSIgY3k9IjMwIiByPSIzIi8+PGNpcmNsZSBjeD0iNjUiIGN5PSIzMCIgcj0iMyIvPjxjaXJjbGUgY3g9IjUwIiBjeT0iNDUiIHI9IjMiLz48bGluZSB4MT0iMzUiIHkxPSIzMCIgeDI9IjUwIiB5Mj0iNDUiLz48bGluZSB4MT0iNjUiIHkxPSIzMCIgeDI9IjUwIiB5Mj0iNDUiLz48bGluZSB4MT0iMzUiIHkxPSIzMCIgeDI9IjY1IiB5Mj0iMzAiLz48L2c+PHRleHQgeD0iNTAiIHk9IjY1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzIiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ1cmwoI3RleHRHcmFkaWVudCkiPk08L3RleHQ+PGcgZmlsbD0iI2ZiYmYyNCIgb3BhY2l0eT0iMC44Ij48cG9seWdvbiBwb2ludHM9Ijc1LDI1IDc3LDMwIDgyLDMwIDc4LDMzIDgwLDM4IDc1LDM1IDcwLDM4IDcyLDMzIDY4LDMwIDczLDMwIi8+PC9nPjwvc3ZnPg==',
+      link: 'https://ai-markdown-editor.planmydaily.com/',
+      description: 'AI-powered markdown editor with writing assistance tools powered by Google Gemini API for tone changes, grammar fixes, and content refinement.',
+      problem: 'Writers and developers need intelligent assistance for creating and refining markdown content with proper grammar, tone, and flow.',
+      solution: 'Built a React-based markdown editor with integrated AI tools for real-time writing assistance, tone adjustment, and content optimization.',
+      technologies: ['React.js', 'Google Gemini API', 'Marked.js', 'Tailwind CSS', 'AI/ML'],
+      outcome: 'Created a comprehensive writing assistant that improves content quality with AI-powered editing tools',
+      image: 'https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      metrics: {
+        features: '6+',
+        ai_tools: '5',
+        realtime: 'Yes'
+      },
+      features: [
+        'Live markdown preview',
+        'AI tone adjustment (5 styles)',
+        'Grammar and flow correction',
+        'Content summarization',
+        'Text refinement tools',
+        'Real-time rendering'
+      ],
+      gradient: 'from-violet-600 to-purple-600'
+    },
+    {
       id: 'nerdspal',
       title: 'NerdsPal.com',
       client: 'Personal Project',
@@ -154,9 +181,9 @@ export default function Portfolio() {
       outcome: 'Built a community platform that brings together tech enthusiasts and facilitates meaningful connections',
       image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200',
       metrics: {
-        users: 'N/A',
-        connections: 'N/A',
-        engagement: 'N/A'
+        users: '700',
+        connections: '4',
+        engagement: 'inactive'
       },
       gradient: 'from-cyan-600 to-blue-600'
     },
