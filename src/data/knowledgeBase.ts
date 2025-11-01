@@ -55,9 +55,59 @@ export const knowledgeBase = {
       technologies: ["Node.js", "PostgreSQL", "React.js", "AWS", "Leadership"]
     },
     {
+      name: "Parents.VIP",
+      client: "The Parent Inc / TickleMedia",
+      description: "End-to-end influencer social media promotions, market surveys, and content creation process management platform.",
+      outcome: "Streamlined influencer campaigns resulting in 200% increase in campaign efficiency",
+      technologies: ["Node.js", "MySQL", "Mocha", "Microservices", "AWS", "Redis", "Python"]
+    },
+    {
+      name: "RST - Remote Service Tool",
+      client: "Vantive Healthcare",
+      description: "Medical device support platform for remote diagnosis and troubleshooting of medical devices in healthcare facilities.",
+      outcome: "Reduced device downtime by 50% and improved remote diagnostic accuracy by 75%",
+      technologies: ["Node.js", "PostgreSQL", "AWS IoT", "Jest", "TDD", "AWS"]
+    },
+    {
+      name: "SmartbotHub",
+      client: "Smartek21",
+      description: "Chatbot-building platform with Natural Language Processing for creating conversational AI chatbots.",
+      outcome: "Enabled 500+ businesses to deploy chatbots, reducing customer service costs by 60%",
+      technologies: ["AngularJS", "Node.js", "MySQL", "AWS", "NLP"]
+    },
+    {
+      name: "Daily Planner",
+      client: "SaaS Product",
+      description: "A clean, intuitive daily task management application with date navigation and local storage persistence.",
+      outcome: "Created a fully functional daily planner with offline capabilities and cross-date task management",
+      technologies: ["HTML5", "JavaScript", "Tailwind CSS", "Local Storage"]
+    },
+    {
+      name: "Zerodha Sandbox",
+      client: "Open Source Tool",
+      description: "Interactive trading API sandbox demonstrating Zerodha Kite Connect integration with comprehensive endpoints for orders, portfolio, quotes, and market data.",
+      outcome: "Built comprehensive trading API demonstration with real-time dummy data simulation and interactive documentation",
+      technologies: ["TypeScript", "HTML5", "CSS3", "REST API", "Trading APIs"]
+    },
+    {
+      name: "AI Markdown Editor",
+      client: "AI-Powered Tool",
+      description: "AI-powered markdown editor with writing assistance tools powered by Google Gemini API for tone changes, grammar fixes, and content refinement.",
+      outcome: "Created a comprehensive writing assistant that improves content quality with AI-powered editing tools",
+      technologies: ["React.js", "Google Gemini API", "Marked.js", "Tailwind CSS", "AI/ML"]
+    },
+    {
+      name: "FeedbackBox",
+      client: "Developer Tool",
+      description: "Embeddable feedback widget that connects to Google Forms for easy user feedback collection on any website.",
+      outcome: "Created a lightweight, mobile-ready widget that simplifies feedback collection with zero backend requirements",
+      technologies: ["JavaScript", "HTML5", "CSS3", "Google Forms API", "Responsive Design"]
+    },
+    {
       name: "NerdsPal.com",
-      client: "Personal Project",
+      client: "Community Platform",
       description: "AI-powered platform connecting nerds and geeks with like-minded individuals.",
+      outcome: "Built a community platform that brings together tech enthusiasts and facilitates meaningful connections",
       technologies: ["React.js", "Node.js", "AI/ML", "WebSocket", "MongoDB"]
     }
   ],

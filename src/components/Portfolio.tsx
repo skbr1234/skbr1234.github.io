@@ -108,7 +108,6 @@ export default function Portfolio() {
     {
       id: 'daily-planner',
       title: 'Daily Planner',
-      client: 'Personal Project',
       logo: '/images/logos/daily-planner-logo.svg',
       link: 'https://planmydaily.com/',
       description: 'A clean, intuitive daily task management application with date navigation and local storage persistence.',
@@ -127,7 +126,6 @@ export default function Portfolio() {
     {
       id: 'zerodha-sandbox',
       title: 'Zerodha Sandbox',
-      client: 'Personal Project',
       logo: '/images/logos/zerodha-logo.png',
       link: 'https://skbr1234.github.io/zerodha-sandbox/',
       description: 'Interactive trading API sandbox demonstrating Zerodha Kite Connect integration with comprehensive endpoints for orders, portfolio, quotes, and market data.',
@@ -146,7 +144,6 @@ export default function Portfolio() {
     {
       id: 'ai-markdown-editor',
       title: 'AI Markdown Editor',
-      client: 'Personal Project',
       logo: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJiZ0dyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojOGI1Y2Y2O3N0b3Atb3BhY2l0eToxIiAvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2E4NTVmNztzdG9wLW9wYWNpdHk6MSIgLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0idGV4dEdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I2ZmZmZmZjtzdG9wLW9wYWNpdHk6MSIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNmM2U4ZmY7c3RvcC1vcGFjaXR5OjEiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDUiIGZpbGw9InVybCgjYmdHcmFkaWVudCkiIHN0cm9rZT0iIzdjM2FlZCIgc3Ryb2tlLXdpZHRoPSIyIi8+PGcgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEuNSIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC4zIj48Y2lyY2xlIGN4PSIzNSIgY3k9IjMwIiByPSIzIi8+PGNpcmNsZSBjeD0iNjUiIGN5PSIzMCIgcj0iMyIvPjxjaXJjbGUgY3g9IjUwIiBjeT0iNDUiIHI9IjMiLz48bGluZSB4MT0iMzUiIHkxPSIzMCIgeDI9IjUwIiB5Mj0iNDUiLz48bGluZSB4MT0iNjUiIHkxPSIzMCIgeDI9IjUwIiB5Mj0iNDUiLz48bGluZSB4MT0iMzUiIHkxPSIzMCIgeDI9IjY1IiB5Mj0iMzAiLz48L2c+PHRleHQgeD0iNTAiIHk9IjY1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzIiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ1cmwoI3RleHRHcmFkaWVudCkiPk08L3RleHQ+PGcgZmlsbD0iI2ZiYmYyNCIgb3BhY2l0eT0iMC44Ij48cG9seWdvbiBwb2ludHM9Ijc1LDI1IDc3LDMwIDgyLDMwIDc4LDMzIDgwLDM4IDc1LDM1IDcwLDM4IDcyLDMzIDY4LDMwIDczLDMwIi8+PC9nPjwvc3ZnPg==',
       link: 'https://ai-markdown-editor.planmydaily.com/',
       description: 'AI-powered markdown editor with writing assistance tools powered by Google Gemini API for tone changes, grammar fixes, and content refinement.',
@@ -171,9 +168,26 @@ export default function Portfolio() {
       gradient: 'from-violet-600 to-purple-600'
     },
     {
+      id: 'feedbackbox',
+      title: 'FeedbackBox',
+      client: 'Developer Tool',
+      logo: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJiZ0dyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNjY3ZWVhO3N0b3Atb3BhY2l0eToxIiAvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6Izc2NGJhMjtzdG9wLW9wYWNpdHk6MSIgLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0NSIgZmlsbD0idXJsKCNiZ0dyYWRpZW50KSIgc3Ryb2tlPSIjNTU2Y2Q2IiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMzAgMzVoNDBhNSA1IDAgMCAxIDUgNXYyMGE1IDUgMCAwIDEtNSA1SDQwbC04IDhWNjVIMzBhNSA1IDAgMCAxLTUtNVY0MGE1IDUgMCAwIDEgNS01eiIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMC45Ii8+PGNpcmNsZSBjeD0iNDAiIGN5PSI0OCIgcj0iMiIgZmlsbD0iIzY2N2VlYSIvPjxjaXJjbGUgY3g9IjUwIiBjeT0iNDgiIHI9IjIiIGZpbGw9IiM2NjdlZWEiLz48Y2lyY2xlIGN4PSI2MCIgY3k9IjQ4IiByPSIyIiBmaWxsPSIjNjY3ZWVhIi8+PC9zdmc+',
+      link: 'https://feedback-box.planmydaily.com/',
+      description: 'Embeddable feedback widget that connects to Google Forms for easy user feedback collection on any website.',
+      technologies: ['JavaScript', 'HTML5', 'CSS3', 'Google Forms API', 'Responsive Design'],
+      outcome: 'Created a lightweight, mobile-ready widget that simplifies feedback collection with zero backend requirements',
+      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      metrics: {
+        setup: '1 Script',
+        backend: 'Zero',
+        mobile: '100%'
+      },
+      gradient: 'from-blue-600 to-purple-600'
+    },
+    {
       id: 'nerdspal',
       title: 'NerdsPal.com',
-      client: 'Personal Project',
+      client: 'Community Platform',
       logo: '/images/logos/nerdspal-logo.svg',
       link: 'https://www.producthunt.com/products/nersdpal-com',
       description: 'Platform connecting nerds and geeks with like-minded individuals for meaningful conversations and collaborations.',
