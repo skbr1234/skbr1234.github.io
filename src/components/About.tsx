@@ -39,21 +39,21 @@ export default function About() {
 
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              About Kabeer Shah
+              About Nordible Solutions
             </h2>
             
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              I'm a seasoned software development consultant with a passion for creating 
-              scalable web solutions that drive business growth. With extensive experience 
-              working with industry leaders like GE Healthcare and Nium, I bring enterprise-level 
+              We are a software development consultancy with a passion for creating
+              scalable web solutions that drive business growth. With extensive experience
+              working with industry leaders like GE Healthcare and Nium, we bring enterprise-level
               expertise to projects of all sizes.
             </p>
 
             <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              My approach combines technical excellence with business acumen, ensuring that 
-              every solution I deliver not only meets technical requirements but also drives 
-              measurable business outcomes. I specialize in end-to-end architectural design, 
-              leveraging agile methodologies and test-driven development to ensure reliable, 
+              Our approach combines technical excellence with business acumen, ensuring that
+              every solution we deliver not only meets technical requirements but also drives
+              measurable business outcomes. We specialize in end-to-end architectural design,
+              leveraging agile methodologies and test-driven development to ensure reliable,
               maintainable solutions.
             </p>
 

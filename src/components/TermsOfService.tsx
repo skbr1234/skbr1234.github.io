@@ -28,7 +28,7 @@ export default function TermsOfService({ onBack }: TermsOfServiceProps) {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">1. Acceptance of Terms</h2>
               <p className="text-gray-600 dark:text-gray-300">
-                By accessing and using the services provided by Kabeer Shah Software Consultancy ("we," "our," or "us"), you accept and agree to be bound by the terms and provision of this agreement.
+                By accessing and using the services provided by Nordible Solutions ("we," "our," or "us"), you accept and agree to be bound by the terms and provision of this agreement.
               </p>
             </section>
 

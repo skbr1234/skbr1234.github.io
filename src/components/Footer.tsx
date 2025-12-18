@@ -14,7 +14,10 @@ export default function Footer({ onPrivacyClick, onTermsClick }: FooterProps) {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <Code className="h-8 w-8 text-purple-400" />
-              <span className="text-2xl font-bold">Kabeer Shah</span>
+              <div className="flex flex-col">
+              <span className="text-xl font-bold text-white">Nordible</span>
+              <span className="text-sm font-bold text-gray-400">Solutions</span>
+            </div>
             </div>
             <p className="text-gray-300 mb-4">
               Software Development Consultant specializing in scalable web solutions 
@@ -72,7 +75,7 @@ export default function Footer({ onPrivacyClick, onTermsClick }: FooterProps) {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Kabeer Shah. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Nordible Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>

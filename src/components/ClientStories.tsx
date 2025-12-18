@@ -4,21 +4,21 @@ import { Star } from 'lucide-react';
 export default function ClientStories() {
   const testimonials = [
     {
-      quote: "Kabeer's technical expertise and leadership were instrumental in delivering our healthcare platform ahead of schedule. His attention to detail and architectural vision made all the difference.",
+      quote: "Nordible Solutions' technical expertise and leadership were instrumental in delivering our healthcare platform ahead of schedule. Their attention to detail and architectural vision made all the difference.",
       author: "Dr. Sarah Chen",
       role: "Product Manager",
       company: "GE Healthcare",
       rating: 5
     },
     {
-      quote: "Working with Kabeer was a game-changer for our fintech platform. His deep understanding of scalable systems helped us process millions of transactions seamlessly.",
+      quote: "Working with Nordible Solutions was a game-changer for our fintech platform. Their deep understanding of scalable systems helped us process millions of transactions seamlessly.",
       author: "Michael Rodriguez",
       role: "CTO",
       company: "Nium",
       rating: 5
     },
     {
-      quote: "Kabeer's expertise in healthcare technology integration was invaluable. His solution improved our device monitoring capabilities significantly.",
+      quote: "Nordible Solutions' expertise in healthcare technology integration was invaluable. Their solution improved our device monitoring capabilities significantly.",
       author: "Dr. Amanda Foster",
       role: "CEO",
       company: "Baxter International",
