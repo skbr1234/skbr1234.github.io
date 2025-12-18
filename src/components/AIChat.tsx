@@ -13,7 +13,7 @@ export default function AIChat() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: "Hi! I'm Kabeer's AI assistant. Ask me anything about his experience, projects, or skills!",
+      content: "Hi! I'm Nordible's AI assistant. Ask me anything about his experience, projects, or skills!",
       timestamp: new Date()
     }
   ]);
@@ -72,7 +72,7 @@ export default function AIChat() {
     } catch (error) {
       const errorMessage: Message = {
         role: 'assistant',
-        content: "I'm having trouble right now. Please use the contact form below to reach Kabeer directly.",
+        content: "I'm having trouble right now. Please use the contact form below to reach Nordible directly.",
         timestamp: new Date()
       };
       setMessages(prev => [...prev, errorMessage]);
@@ -87,7 +87,7 @@ export default function AIChat() {
     const success = await sendContactEmail(contactForm as ContactFormData);
     
     if (success) {
-      alert('Message sent! Kabeer will get back to you within 24 hours.');
+      alert('Message sent! Nordible will get back to you within 24 hours.');
       setContactForm({
         fullName: '',
         email: '',
@@ -103,10 +103,10 @@ export default function AIChat() {
   };
 
   const suggestedQuestions = [
-    "What projects has Kabeer worked on?",
-    "What technologies does Kabeer know?",
-    "Tell me about Kabeer's experience",
-    "What services does Kabeer offer?"
+    "What projects has Nordible worked on?",
+    "What technologies does Nordible know?",
+    "Tell me about Nordible's experience",
+    "What services does Nordible offer?"
   ];
 
   return (
@@ -162,7 +162,7 @@ export default function AIChat() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleSend()}
-              placeholder="Ask about Kabeer's experience, projects, or skills..."
+              placeholder="Ask about Nordible's experience, projects, or skills..."
               className="flex-1 px-4 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
               disabled={isLoading}
             />
@@ -241,7 +241,7 @@ export default function AIChat() {
             <div className="mt-6 text-center">
               <p className="text-blue-100 text-sm mb-4">Or reach out directly:</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                <a href="mailto:meetkabeershah@gmail.com" className="flex items-center justify-center space-x-2 bg-white/20 hover:bg-white/30 px-4 py-3 rounded-lg transition-colors">
+                <a href="mailto:nordiblesolutions@gmail.com" className="flex items-center justify-center space-x-2 bg-white/20 hover:bg-white/30 px-4 py-3 rounded-lg transition-colors">
                   <Mail className="h-4 w-4" />
                   <span>Email</span>
                 </a>

@@ -8,7 +8,7 @@ export default function Testimonials() {
       role: 'Product Manager',
       company: 'Healthcare Tech',
       rating: 5,
-      text: 'Kabeer delivered an exceptional healthcare platform that exceeded our expectations. His attention to detail and technical expertise made the project a huge success.',
+      text: 'Nordible delivered an exceptional healthcare platform that exceeded our expectations. His attention to detail and technical expertise made the project a huge success.',
       avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face'
     },
     {
@@ -16,7 +16,7 @@ export default function Testimonials() {
       role: 'CTO',
       company: 'Fintech Startup',
       rating: 5,
-      text: 'Working with Kabeer was fantastic. He built our payment processing system with incredible precision and delivered on time. Highly recommended!',
+      text: 'Working with Nordible was fantastic. He built our payment processing system with incredible precision and delivered on time. Highly recommended!',
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
     },
     {
@@ -24,7 +24,7 @@ export default function Testimonials() {
       role: 'Business Owner',
       company: 'E-commerce Store',
       rating: 5,
-      text: 'Our online store has been performing amazingly since Kabeer built it. Sales increased by 150% in the first month. Professional and reliable!',
+      text: 'Our online store has been performing amazingly since Nordible built it. Sales increased by 150% in the first month. Professional and reliable!',
       avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face'
     }
   ];

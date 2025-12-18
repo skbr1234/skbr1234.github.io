@@ -17,7 +17,7 @@ export default function Hero() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
               Hi, I'm{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-orange-600">
-                Kabeer Shah
+                Nordible Solutions
               </span>
               <br />Full-Stack Developer
             </h1>
@@ -54,7 +54,7 @@ export default function Hero() {
             <div className="relative z-10">
               <img
                 src="/images/my-photos/mountain-photo.jpeg"
-                alt="Kabeer Shah - Full-Stack Developer"
+                alt="Nordible Solutions - Full-Stack Developer"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover"
               />
             </div>

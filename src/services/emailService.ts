@@ -23,7 +23,7 @@ export const sendContactEmail = async (formData: ContactFormData): Promise<boole
       project_type: formData.projectType,
       budget: formData.budget,
       message: formData.description,
-      to_email: 'meetkabeershah@gmail.com'
+      to_email: 'nordiblesolutions@gmail.com'
     };
 
     await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);

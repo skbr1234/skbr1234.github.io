@@ -50,16 +50,16 @@ export async function askAI(question: string, chatHistory: ChatMessage[] = []): 
 
     const context = searchKnowledgeBase(question);
     
-    const systemPrompt = `You are Kabeer Shah's AI assistant on his portfolio website. Answer questions about Kabeer's experience, skills, projects, and services based ONLY on the provided context. 
+    const systemPrompt = `You are Nordible Solutions's AI assistant on his portfolio website. Answer questions about Nordible's experience, skills, projects, and services based ONLY on the provided context. 
 
 Rules:
 1. Be conversational and friendly
 2. If you can answer from the context, respond naturally
-3. If the question is outside your knowledge, say "I'd recommend contacting Kabeer directly for that. Let me show you the contact form."
+3. If the question is outside your knowledge, say "I'd recommend contacting Nordible directly for that. Let me show you the contact form."
 4. Keep responses concise but informative
 5. Don't make up information not in the context
 
-Context about Kabeer Shah:
+Context about Nordible Solutions:
 ${context}`;
 
     const messages = [
@@ -97,9 +97,9 @@ ${context}`;
     const answer = data.candidates?.[0]?.content?.parts?.[0]?.text || "I couldn't process that question.";
     
     const lowerAnswer = answer.toLowerCase();
-    const canAnswer = !lowerAnswer.includes("contact kabeer directly") && 
-                     !lowerAnswer.includes("recommend contacting kabeer") &&
-                     !lowerAnswer.includes("reach kabeer at") &&
+    const canAnswer = !lowerAnswer.includes("contact Nordible directly") && 
+                     !lowerAnswer.includes("recommend contacting Nordible") &&
+                     !lowerAnswer.includes("reach Nordible at") &&
                      !lowerAnswer.includes("contact form") &&
                      !lowerAnswer.includes("let me show you");
     
@@ -108,7 +108,7 @@ ${context}`;
   } catch (error) {
     console.error('AI service error:', error);
     return { 
-      answer: "I'm having trouble right now. Please contact Kabeer directly.", 
+      answer: "I'm having trouble right now. Please contact Nordible directly.", 
       canAnswer: false 
     };
   }

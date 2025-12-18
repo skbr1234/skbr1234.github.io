@@ -32,7 +32,7 @@ export default function About() {
           <div>
             <img
               src="/images/my-photos/church-street-photo.jpeg"
-              alt="Kabeer Shah"
+              alt="Nordible Solutions"
               className="rounded-2xl shadow-2xl w-full h-auto object-cover"
             />
           </div>

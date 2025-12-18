@@ -1,8 +1,8 @@
 export const knowledgeBase = {
   personal: {
-    name: "Kabeer Shah",
+    name: "Nordible Solutions",
     title: "Senior Software Engineer",
-    email: "meetkabeershah@gmail.com",
+    email: "nordiblesolutions@gmail.com",
     phone: "+91-9773207706",
     summary: "Passionate full-stack developer with 8+ years of experience building scalable web applications for healthcare, fintech, and technology sectors."
   },

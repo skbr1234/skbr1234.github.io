@@ -14,7 +14,7 @@ export default function Footer({ onPrivacyClick, onTermsClick }: FooterProps) {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <Code className="h-8 w-8 text-purple-400" />
-              <span className="text-2xl font-bold">Kabeer Shah</span>
+              <span className="text-2xl font-bold">Nordible Solutions</span>
             </div>
             <p className="text-gray-300 mb-4">
               Software Development Consultant specializing in scalable web solutions 
@@ -23,7 +23,7 @@ export default function Footer({ onPrivacyClick, onTermsClick }: FooterProps) {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-purple-400" />
-                <span className="text-sm">meetkabeershah@gmail.com</span>
+                <span className="text-sm">nordiblesolutions@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-purple-400" />
@@ -85,7 +85,7 @@ export default function Footer({ onPrivacyClick, onTermsClick }: FooterProps) {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Kabeer Shah. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Nordible Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>
