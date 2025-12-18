@@ -266,10 +266,10 @@ export default function Portfolio() {
             <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Portfolio Showcase</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Projects I've Built
+            Our Projects
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Here are some of the applications I've had the pleasure of working on - from healthcare platforms to fintech solutions
+            Here are some of the applications Nordible Solutions has had the pleasure of working on - from healthcare platforms to fintech solutions
           </p>
         </div>
 
@@ -422,9 +422,9 @@ export default function Portfolio() {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Want to Build Something Cool Together?</h3>
+            <h3 className="text-2xl font-bold mb-4">Partner with Nordible Solutions for Your Next Project</h3>
             <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-              I love working on interesting projects and solving complex problems. Let's chat about your ideas!
+              We love working on interesting projects and solving complex problems. Let's chat about your ideas!
             </p>
             <button
               onClick={() => {

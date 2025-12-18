@@ -207,7 +207,7 @@ export default function Pricing() {
               💰 Refer a client and earn ₹5,000 when they book a project!
             </p>
             <p className="text-green-700 dark:text-green-400 text-sm">
-              Know someone who needs a website? Share my contact and earn cash rewards.
+              Know someone who needs a website? Share our contact and earn cash rewards.
             </p>
           </div>
           

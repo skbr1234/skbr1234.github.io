@@ -55,7 +55,7 @@ function App() {
         <TrustSignals />{/* freelancing */}
         <Services />
         <BusinessBenefits />{/* freelancing  */}
-        {/* <Pricing /> freelancing */}
+        <Pricing /> {/* freelancing */}
         <Portfolio />
         <Testimonials /> {/* freelancing */}
         <Process /> {/* freelancing */}

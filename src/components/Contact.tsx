@@ -28,7 +28,7 @@ export default function Contact() {
     const success = await sendContactEmail(formData as ContactFormData);
     
     if (success) {
-      alert('Thank you for your inquiry! I will get back to you within 24 hours.');
+      alert('Thank you for your inquiry! We will get back to you within 24 hours.');
       setFormData({
         fullName: '',
         email: '',
@@ -81,8 +81,8 @@ export default function Contact() {
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                 <h4 className="text-lg font-semibold mb-3">Response Time</h4>
                 <p className="text-blue-100 text-sm">
-                  I typically respond to all inquiries within 2-4 hours during business hours. 
-                  For urgent projects, WhatsApp is the fastest way to reach me.
+                  We typically respond to all inquiries within 2-4 hours during business hours. 
+                  For urgent projects, WhatsApp is the fastest way to reach us.
                 </p>
               </div>
             </div>

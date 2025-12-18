@@ -1,10 +1,10 @@
 export const knowledgeBase = {
   personal: {
     name: "Nordible Solutions",
-    title: "Senior Software Engineer",
+    title: "Software Development Agency",
     email: "nordiblesolutions@gmail.com",
     phone: "+91-9773207706",
-    summary: "Passionate full-stack developer with 8+ years of experience building scalable web applications for healthcare, fintech, and technology sectors."
+    summary: "Nordible Solutions is a software development agency with 8+ years of experience building scalable web applications for healthcare, fintech, and technology sectors."
   },
   
   experience: [
@@ -12,21 +12,21 @@ export const knowledgeBase = {
       company: "Vantive Healthcare (formerly Baxter)",
       role: "Senior Software Engineer",
       duration: "2023 - Present",
-      description: "Leading development of RST (Remote Service Tool) for medical device diagnostics and troubleshooting.",
+      description: "Developed RST (Remote Service Tool) for medical device diagnostics and troubleshooting.",
       technologies: ["Node.js", "PostgreSQL", "AWS IoT", "Jest", "TDD"]
     },
     {
       company: "NIUM (formerly InstaReM)",
       role: "Senior Software Engineer", 
       duration: "2021 - 2023",
-      description: "Led technical development of Instarem.com fintech platform handling millions in cross-border transactions.",
+      description: "Contributed to the technical development of Instarem.com fintech platform handling millions in cross-border transactions.",
       technologies: ["Node.js", "React.js", "PostgreSQL", "Mocha", "AWS"]
     },
     {
       company: "General Electric Healthcare",
       role: "Software Engineer",
       duration: "2019 - 2021", 
-      description: "Developed OncoCare platform for oncology care management serving healthcare providers worldwide.",
+      description: "Contributed to the development of OncoCare platform for oncology care management serving healthcare providers worldwide.",
       technologies: ["Node.js", "PostgreSQL", "React.js", "AWS", "Leadership"]
     }
   ],
@@ -77,21 +77,21 @@ export const knowledgeBase = {
     },
     {
       name: "Daily Planner",
-      client: "SaaS Product",
+      client: "Internal Project",
       description: "A clean, intuitive daily task management application with date navigation and local storage persistence.",
       outcome: "Created a fully functional daily planner with offline capabilities and cross-date task management",
       technologies: ["HTML5", "JavaScript", "Tailwind CSS", "Local Storage"]
     },
     {
       name: "Zerodha Sandbox",
-      client: "Open Source Tool",
+      client: "Internal Project",
       description: "Interactive trading API sandbox demonstrating Zerodha Kite Connect integration with comprehensive endpoints for orders, portfolio, quotes, and market data.",
       outcome: "Built comprehensive trading API demonstration with real-time dummy data simulation and interactive documentation",
       technologies: ["TypeScript", "HTML5", "CSS3", "REST API", "Trading APIs"]
     },
     {
       name: "AI Markdown Editor",
-      client: "AI-Powered Tool",
+      client: "Internal Project",
       description: "AI-powered markdown editor with writing assistance tools powered by Google Gemini API for tone changes, grammar fixes, and content refinement.",
       outcome: "Created a comprehensive writing assistant that improves content quality with AI-powered editing tools",
       technologies: ["React.js", "Google Gemini API", "Marked.js", "Tailwind CSS", "AI/ML"]
@@ -105,8 +105,8 @@ export const knowledgeBase = {
     },
     {
       name: "NerdsPal.com",
-      client: "Community Platform",
-      description: "AI-powered platform connecting nerds and geeks with like-minded individuals.",
+      client: "Internal Project",
+      description: "Platform connecting enthusiasts with like-minded individuals for meaningful conversations and collaborations.",
       outcome: "Built a community platform that brings together tech enthusiasts and facilitates meaningful connections",
       technologies: ["React.js", "Node.js", "AI/ML", "WebSocket", "MongoDB"]
     }

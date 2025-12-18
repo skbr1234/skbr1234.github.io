@@ -37,7 +37,7 @@ export default function Testimonials() {
             What Clients Say
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Don't just take my word for it - here's what clients have to say about working with me
+            Don't just take our word for it - here's what clients have to say about working with us
           </p>
         </div>
 
@@ -76,7 +76,7 @@ export default function Testimonials() {
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">Join 50+ Happy Clients</h3>
             <p className="text-lg opacity-90 mb-6">
-              Ready to bring your project to life? Let's discuss how I can help you succeed.
+              Ready to bring your project to life? Let's discuss how we can help you succeed.
             </p>
             <button
               onClick={() => {

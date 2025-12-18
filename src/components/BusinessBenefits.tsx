@@ -55,7 +55,7 @@ export default function BusinessBenefits() {
             Real Business Impact
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            See how my solutions deliver measurable results for your business
+            See how our solutions deliver measurable results for your business
           </p>
         </div>
 

@@ -155,8 +155,7 @@ export default function TechStack() {
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Full-Stack Versatility</h3>
           <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             With expertise spanning frontend frameworks, backend technologies, databases, and cloud platforms, 
-            I can architect and implement complete solutions tailored to your specific business needs. 
-            My diverse skill set ensures optimal technology choices for every project.
+                        We can architect and implement complete solutions tailored to your specific business needs. Our diverse skill set ensures optimal technology choices for every project.
           </p>
         </div>
       </div>
