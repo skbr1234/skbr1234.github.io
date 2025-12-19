@@ -82,7 +82,7 @@ export default function BusinessBenefits() {
         </div>
 
         <div className="mt-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white text-center">
-          <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
+          <h3 className="text-2xl font-bold mb-4">Ready to work?</h3>
           <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
             Let's discuss how these benefits can apply to your specific project and goals.
           </p>

@@ -52,15 +52,15 @@ function App() {
         <Header onDashboard={() => setCurrentView('dashboard')} />
         <Hero />
         {/* freelancing features are already added to the site, just uncomment the freelancing secions instead of developing new ones */}
-        <TrustSignals />{/* freelancing */}
+        {/* <TrustSignals />freelancing */}
         <Services />
-        <BusinessBenefits />{/* freelancing  */}
+        {/*<BusinessBenefits /> freelancing  */}
         {/* <Pricing /> freelancing */}
         <Portfolio />
-        <Testimonials /> {/* freelancing */}
-        <Process /> {/* freelancing */}
-        <Availability />
-        <ClientStories /> {/* freelancing */}
+        {/* <Testimonials /> freelancing */}
+        {/* <Process /> freelancing */}
+        {/* <Availability />freelancing */}
+        {/* <ClientStories /> freelancing */}
         <About />
         <TechStack />
         <AIChat />

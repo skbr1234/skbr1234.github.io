@@ -74,7 +74,7 @@ export default function Testimonials() {
 
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Join 50+ Happy Clients</h3>
+            <h3 className="text-2xl font-bold mb-4">Join my network</h3>
             <p className="text-lg opacity-90 mb-6">
               Ready to bring your project to life? Let's discuss how I can help you succeed.
             </p>
