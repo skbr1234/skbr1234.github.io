@@ -2,11 +2,7 @@ import React, { useState } from 'react';
 import { Menu, X, Code, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 
-interface HeaderProps {
-  onDashboard: () => void;
-}
-
-export default function Header({ onDashboard }: HeaderProps) {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isDark, toggleTheme } = useTheme();
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Users, Code, TrendingUp } from 'lucide-react';
+import { Award, Users, TrendingUp } from 'lucide-react';
 
 export default function TrustSignals() {
   const stats = [

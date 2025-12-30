@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, ExternalLink, Users, TrendingUp, CheckCircle, Pause, Play, Award } from 'lucide-react';
-import { useTheme } from '../contexts/ThemeContext';
+import { ChevronLeft, ChevronRight, ExternalLink, TrendingUp, CheckCircle, Pause, Play, Award } from 'lucide-react';
 
 export default function Portfolio() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [imageErrors, setImageErrors] = useState<Set<string>>(new Set());
-
-  const { isDark } = useTheme();
 
   const projects = [
     {

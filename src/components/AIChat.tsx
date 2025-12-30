@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { Send, Bot, User, Mail, Phone, Calendar } from 'lucide-react';
 import { askAI } from '../services/aiService';
 import { sendContactEmail, ContactFormData } from '../services/emailService';
@@ -69,7 +69,7 @@ export default function AIChat() {
           setShowContactForm(true);
         }, 1000);
       }
-    } catch (error) {
+    } catch {
       const errorMessage: Message = {
         role: 'assistant',
         content: "I'm having trouble right now. Please use the contact form below to reach Kabeer directly.",
